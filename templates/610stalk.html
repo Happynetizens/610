@@ -1,0 +1,1328 @@
+    <! -- 该网页由爆齐，语数双零（后端）提供技术 -->
+        <! -- 六年啦！带你回顾历代火遍班上的610梗吧 -->
+            <! -- 【610os及.INcHd.已接入，可开始使用。】 -->
+                <! -- 该网页当前版本：v1.6.2.00.000_Destruction & EndErrorsConceal::TheNewChapters!!! -->
+                    <! -- 该网页JavaScript版本：v1.2.5_EndCC，该网页CSS版本：3.0.0.1_EndMemes::css -->
+                        <! -- 梗网站0.5周年庆开始啦！感谢大家一直以来的支持，其实meme网站永不断更哦！ -->
+
+    <!DOCTYPE html>
+    <html lang="zh-CH">
+	<head>
+            <meta charset="utf-8">
+            <!--"../static/CSS/"-->
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link rel="stylesheet" type="text/css" href="../static/CSS/动态_css3导航栏.css">
+                        <link rel="stylesheet" type="text/css" href="../static/CSS/搜索栏.css">
+                            <link rel="stylesheet" type="text/css" href="../static/CSS/导航栏标题_颜色.css">
+                                <link rel="stylesheet" type="text/css" href="../static/CSS/超链接色系.css">
+                                    <link rel="stylesheet" type="text/css" href="../static/CSS/梗_显示框.css">
+                                        <link rel="stylesheet" type="text/css" href="../static/CSS/侧边栏_610os剧情网.css">
+                                            <link rel="stylesheet" type="text/css" href="../static/CSS/concealMemes_five, six.css">
+                                                <link rel="icon" href="../static/images/picture/《六哥の表情，no.4》.png">
+                            <title>610meme大全！</title>
+			
+                    <style id="pageStyle">
+
+                        /* 去除鼠标悬停链接时的下划线 */
+
+                        a:hover {
+                            text-decoration: none;
+                        }
+
+                        /* 设置网站背景默认样式 */
+
+                        body {
+                            background-repeat: no-repeat;
+                            background-attachment: fixed;
+                            background-size: 104.4% 105.7%;
+                        }
+                    </style>
+
+	</head>
+            <body onload="addOnClickToLink()" style='background-image: url("../static/images/picture/610stalk Hello! 0.5th-v1.6.0!.png");'>
+            <div id="targetElement" style=""></div>
+
+            <!-- 背景音乐侧边栏的应用（在v1.6.1版本融合到侧边栏中） -->
+            <!-- ##################################################### -->
+
+            <div id="bars" class="sidebar_os-musicbar" style="display:none;">
+                <strong class="sidebar_os-music">
+                    背景<br/>音乐
+
+		    <!--"../static/music/meme/"-->
+                </strong>
+                    <strong class="sidebar_os-bgm1">
+                        <a href="#" onclick="toggleMusic('../static/music/meme/锦里.mp3')" style="color:yellow">锦里</a>
+                    </strong>
+                        <strong class="sidebar_os-bgm2">
+                            <a href="#" onclick="toggleMusic('../static/music/meme/春节序曲.mp3')" style="color:yellow">春节序曲</a>
+                        </strong>
+                            <strong class="sidebar_os-bgm3">
+                                <a href="#" onclick="toggleMusic('../static/music/meme/好运来.mp3')" style="color:yellow">好运来</a>
+                            </strong>
+                                <strong class="sidebar_os-bgm4">
+                                    <a href="#" onclick="toggleMusic('../static/music/meme/好日子.mp3')" style="color:yellow">好日子</a>
+                                </strong>
+                                    <strong class="sidebar_os-bgm5">
+                                        <a href="#" onclick="toggleMusic('../static/music/meme/Distorted Fate.mp3')" style="color:yellow">魔王曲1</a>
+                                    </strong>
+                                        <strong class="sidebar_os-bgm6">
+                                            <a href="#" onclick="toggleMusic('../static/music/meme/retribution.mp3')" style="color:yellow">魔王曲2</a>
+                                        </strong>
+                                            <strong class="sidebar_os-bgmover">
+                                                <a href="#" onclick="toggleMusic(null)" style="color:yellow">停止播放当前音乐</a>
+                                            </strong>
+                                                <strong class="sidebar_os-other">
+                                                    <a href="#" onclick="toggleDiv(this)" style="color:yellow">更多</a>
+                                                </strong>
+            </div>
+                <div id="myDiv" class="sidebar_os-musicbar_conceal" style="display:none;">
+                    <strong class="sidebar_os-music_conceal">
+                        更多<br/>音乐
+                    </strong>
+                        <strong class="sidebar_os-conceal-bgm1">
+                            <a href="#" onclick="toggleMusic('../static/music/moreMusic/0.5周年纪念.mp3')" style="color:yellow">0.5周年</a>
+                        </strong>
+                            <strong class="sidebar_os-conceal-bgm2">
+                                <a href="#" onclick="toggleMusic('../static/music/moreMusic/魔王曲五.mp3')" style="color:yellow">魔王曲3!</a>
+                            </strong>
+                                <strong class="sidebar_os-conceal-bgm3">
+                                    <a href="#" onclick="toggleMusic('../static/music/moreMusic/银行不妙曲.mp3')" style="color:yellow">银行不妙曲</a>
+                                </strong>
+                                    <strong class="sidebar_os-conceal-bgm4">
+                                        <a href="#" onclick="toggleMusic('../static/music/moreMusic/恭喜发财.mp3')" style="color:yellow">恭喜发财</a>
+                                    </strong>
+                                        <strong class="sidebar_os-conceal-bgm5">
+                                            <a href="#" onclick="toggleMusic('../static/music/moreMusic/斗地只因.mp3')" style="color:yellow">斗地只因?</a>
+                                        </strong>
+                                            <strong class="sidebar_os-conceal-bgm6">
+                                                <a href="#" onclick="toggleMusic('../static/music/moreMusic/Fade Away.mp3')" style="color:yellow">红眼曲?</a>
+                                            </strong>
+                                                <strong class="sidebar_os-conceal-bgm7">
+                                                    <a href="#" onclick="toggleMusic('../static/music/moreMusic/Wake == Wake.mp3')" style="color:yellow">Wake现场</a>
+                                                </strong>
+                                                    <strong class="sidebar_os-conceal-bgm8">
+                                                        <a href="#" onclick="toggleMusic('../static/music/moreMusic/只因你太美live.mp3')" style="color:yellow">坤太美</a>
+                                                    </strong>
+                </div>
+
+
+            <div class="sidebar_os">
+                <strong class="sidebar_os-text">
+                    侧边<br/>音乐
+                </strong>
+                <strong class="sidebar_os-chapter">
+                        <a href="#" style="color:yellow"> <!-- 更新日志不可用 -->
+                            更新日志</a>
+                    </strong>
+                        <strong class="sidebar_os-baoqi">
+                            <a href="#" style="color:yellow" onclick="Trues()">
+                            关于该网站编写者</a>
+                        </strong>
+                            <strong class="sidebar_os-musicCe">
+                                <a href="#" style="color:yellow" onclick="TheMusicConceals()" id="huhu">
+                                启用音乐栏球</a>
+                            </strong>
+            </div>
+
+            <div class="Lingdong-Island">
+                <strong class="Lingdong-renew"><a href="#" id="looking">更新内容一览</a></strong>
+            </div>
+
+            <!-- 更新公告：v1.6.0，v1.6.1 -->
+            <!-- **************************************************** -->
+
+            <div class="renews" id="renew_display">
+                <strong id="renew-notice"><i>
+                    Tips！梗网站的特大更新！v1.6.0_0.5th版本正式上线啦！<br/>——————————————————————————</i></strong><br/><br/><br/><br/>
+                <strong id="notice">
+                    v1.6.0版本主要更新内容：<br/>———————————————————————————————<br/>
+                    *1.6.0版本隐藏梗五，六追加！<br/><br/>
+                    &nbsp***隐藏梗五:" ？？？"<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp文本附加:" ？？？"<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp本梗创造者：410朗诵成员；<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp红色为中国之色，今为历代所创之梗；<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp解锁条件：已解禁隐藏梗四；<br/><br/>
+
+                    &nbsp***隐藏梗六:" ？？？"<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp文本附加:" ？？？"<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp本梗创造者：程序员爆齐；<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp虽然上初中了，但仍记得六十班！加油，奥利给！<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp解锁条件：已解禁隐藏梗五，及梗五附加音频；<br/><br/>
+
+                    *1.6.0版本新娱乐梗追加！<br/><br/>
+                    &nbsp***隐藏梗五附加梗:"Destructionの回忆[doge]"<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp本梗没有创造者，是程序员自创梗；<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp解锁条件：已解禁隐藏梗五；<br/><br/>
+
+                    &nbsp***人物回忆梗:"小腊肉星期五"<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp本梗创造者：易雅兰，小萝莉<br/><br/>
+
+                    &nbsp***运动会特殊梗:"A炸！！！！！"<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp本梗创造者：老班长&刘某涵<br/><br/>
+
+                    &nbsp***班级自创梗:"东汉末年闹鸡瘟，江贼怒斩蔡徐坤"<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp本梗创造者：全班笙父等人<br/><br/>
+
+                    &nbsp***班级意外梗:"Good morning! 《Mr.lin》!"<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp本梗创造者：全班不知名人员<br/><br/>
+
+                    *1.6.0其他添加物品！<br/><br/>
+                    &nbsp***新内容：网站灵动岛！<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp呈现为青紫色悬挂上空，与苹果一样是动态的哦！<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp目前灵动岛可查看内容：更新内容一览；<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp我们会添加更多内容进去的...只要你留言！<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp[doge][开心doge][深情doge]<br/><br/>
+
+                    &nbsp***追加meme系列：爆齐の漫画名场面！<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp小编：吾日三省吾身，只因鸡星太美...<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp漫画名场面收录了爆齐漫画中的梗！！<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp目前已收录梗数量：3个名场面，1个隐藏梗二追加梗，1个音频梗；<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp若有甚么名场面请第一时间告知小编！[优雅doge]<br/><br/>
+
+                    ***隐藏梗新内容：文本附加框！<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp文本附加框可以来保存解锁时显示栏的内容哦！<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp当然，这个也可以判断当前梗是否解锁（例如五梗）；<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp同时，这个也可以当作一种"回忆"文本来使用；<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp新版本请多关照，有啥bug去留言吧！<br/>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp[优雅doge][程序员の秃头之痛]<br/><br/>———————————————————————————————<br/>
+
+                    v1.6.0版本bug修复 & 问题解答 & 调整与替换！<br/>———————————————————————————————<br/>
+                    1.修复了部分更多音频无法正常播放的bug；<br/>
+                    2.修复了开启隐藏梗五后，隐藏梗全部消失的bug；<br/>
+                    3.修复了隐藏梗五无法正常开启的bug；<br/>
+                    4.修复了灵动岛的"鬼畜"状况，且调整位置；<br/>
+                    5.修复了后端函数冲突的bug；<br/>
+                    6.导航栏更改了部分内容；<br/>
+                    7.优化了部分内容；<br/>
+                    8.问题解答：隐藏梗五的音频不可跳过，需等待播放完毕！<br/>
+                    9.须知：谷歌浏览器（Chrome）的部分内容会有错位！<br/>
+                    10.隐藏梗调整：更改了隐藏梗二的解禁方式；<br/>
+                    11.乱码梗调整：1.6.0版本添入了彩蛋！<br/>
+                    12.背景调整：替换为"0.5周年_v1.6.0版本"特别纪念大厅；<br/>
+                    13.音乐调整：将部分音频替换为"0.5th"，"斗地只因？"与"魔王曲3！"；<br/>
+                    14.长久bug修复：修复了点击其他梗时，隐藏梗全部消失的bug；<br/><br/>———————————————————————————————<br/>
+
+                    v1.6.1版本bug修复 & 调整与替换！<br/>———————————————————————————————<br/>
+                    1.将"背景音乐"侧边球与主侧边球融合，目前主侧边球已更改为"侧边音乐"；<br/>
+                    2.回忆梗收录："卤蛋老师"，创造者：小萝莉，爆齐；<br/>
+                    3.回忆梗收录："完了，我耳朵瞎了"，创造者：爆齐；<br/>
+                    4.更改了部分梗显示框的样式与颜色；<br/>
+                    5.彩蛋新增：关于该网站创造者现在可以用啦！<br/>
+                    6.更新加载条：调整了形状；<br/>
+                    7.阴影悬浮特效：鼠标悬浮在显示框上，新增了背景阴影！<br/>
+                    8.导航栏大改：导航栏2.0上线！更改了外观及内部链接功能！<br/><br/>———————————————————————————————<br/>
+
+                    v1.6.17版本bug修复 & 调整与替换！<br/>———————————————————————————————<br/>
+                    1.收录《柴界》新梗：只会玩板砖的黑帮老大，创造者：柴界，天医生；<br/>
+
+
+                    To：程序员爆齐<br/>
+                    2023年11月2日
+                </strong>
+            </div>
+            <div id="overlay"></div>
+            <div id="loading"></div>
+            <button id="conceal-btn">X</button>
+
+                <! -- 导入JavaScript文件 -->
+		            <!--"../static/JavaScript/"-->
+
+                <script src="../static/JavaScript/FunctionBgm.js"></script>
+                    <script src="../static/JavaScript/FunctionConceal.js"></script>
+                        <script src="../static/JavaScript/Display.js"></script>
+                            <script src="../static/JavaScript/ConcealMeme.js"></script>
+                                <script src="../static/JavaScript/ConcealPeople.js"></script>
+                                    <script src="../static/JavaScript/ConcealFour.js"></script>
+                                        <script src="../static/JavaScript/hrefAudioData.js"></script>
+                                            <script src="../static/JavaScript/IAmLikeRed.js"></script>
+                                                <script src="../static/JavaScript/Function-display.js"></script>
+                                                    <script src="../static/JavaScript/TheEnd.js"></script>
+                                                        <script src="../static/JavaScript/Returns.js"></script>
+                                                            <script>
+                                                                function Trues() {
+                                                                    alert('姓名：爆齐 | 年龄：114514岁\n出生：赛亚星 | 口头禅：yee~\n喜好：鬼畜，画漫画等 | 代表作有著名的《吃鸡大战》，《生化之区》，《610梗网站》，《火柴人大作战》等，其为爆氏的第114代传人，喜欢吃金坷垃和油饼，爱跟阿伟打电动，欢迎致电130-1145-1419！');
+                                                                }
+
+                                                                function qqs() {
+                                                                    alert('一起讨论610梗和编程！创造未来！\n欢迎加入qq群：718936467');
+                                                                }
+                                                            </script>
+
+                <font face="STHeiTi" size="5" color="#8A2BE2">
+                    <div class="header">
+                                <h1 class="linear-gradient-text"
+                                    style="text-align:center;font-size:60px" id="FiveConceals">
+                                    六年生活，满满的<a href="#" style="background:linear-gradient(to bottom left, #66DD00, #FFFF00, #77FFEE);
+                                    -webkit-background-clip: text; background-clip: text;color: transparent;" onclick="RedTarget()">回忆</a>，610梗网站！
+                                </h1>
+                    </div>
+                        <div class="div">
+                            <div class="div-a">
+                            <img src="../static/images/picture/导航栏.png" class="img-new" width="30" height="20">
+                            <a href="../" class="href" id="returns">返回主页面</a>
+                            <a href="#" class="href-a" id="logins">登录梗网页</a>
+                            <a href="#" class="href-b" id="news">加入新梗</a>
+                            <a href="#" class="href-c" id="QQ" onclick="qqs()">加入梗qq群</a>
+                            <a href="stalkhelp" class="href-d" id="helps">梗网页帮助</a>
+                            <a href="#" class="href-e" id="os" onclick="OversDestruction()">610_osIN网</a>
+                            <a href="#" class="href-f" id="bugs" onclick="returnBugs()">反馈"特性"？</a>
+                    </div>
+                        </div>
+                                <br/>
+
+                            <div class="box">
+                                <input type="text" class="input" placeholder="搜索你想康的梗~">
+                                <input type="button" value="搜索" class="button">
+                            </div>
+
+                    <br/>
+
+                    <! -- 正文 -->
+
+
+                <hr style="color:#6495ED">
+
+                    <div class="meme-p">
+                            <p style="text-align:center">
+                                <strong style="font-size:30px" id="desTruc">
+                                    <a href="#" onclick="changeText()" id="refresh-link"
+                                    class="music-link">梗</a>
+                            ，是一种网络用语，是一种特有的文化精神
+                            <br/>
+                                <br/>
+                                    <br/>
+                            在610中，也有着许许多多的梗！！
+                            <br/>
+                                <br/>
+                                    <br/>
+                            610中，梗被称为meme，其中经典也十分的多!
+                            <br/>
+                                <br/>
+                                    <br/>
+                                    <strong id="inTo" style="font-size: 30px;
+                            background: -webkit-linear-gradient(left, #33FFFF, #0000CC);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;">
+                        六年期间，梗之不间断产也<br/></strong>
+                            <br/>
+                                <br/><strong id="inFor">
+                            让我们来看看这六年都诞生了哪些"经典"吧！！
+                        </strong>
+                        </strong>
+                            </p>
+                    </div>
+                    <br/>
+                    <div class="h3">
+                        <h3 class="h3-a" id="HDestruction">
+                        610火区梗，永远无法超越的经典！
+                    </h3>
+                        </div>
+                    <br/>
+
+                            <div class="star" style="float:left">
+                                    <strong class="text">
+                                        <a href="#" style="color:yellow">"可能需要"</a>
+                                    </strong><br/>
+                                <strong>
+                                    <a href="#" class="word" style="color:yellow">——该梗创造者：付xx</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                    </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-a" style="float:right">
+                                    <strong class="text-a">
+                                        <a href="#" style="color:yellow">"恩（二声）~~~？"</a>
+                                    </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：emo柯南及全班不知名人员</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-b" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"从某种意义来讲"</a>
+                                </strong><br/>
+                            <strong>
+                                <a href="#" class="word" style="color:yellow">——该梗创造者：劳动sensei</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-a-2" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"老年养生课"</a>
+                                </strong><br/>
+                            <strong>
+                                <a href="#" class="word-a" style="color:yellow">——该梗创造者：小萝莉（张xx）</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a">
+                                    更多
+                                </strong>
+                            </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-b" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"承担责任！！！"</a>
+                                </strong><br/>
+                            <strong>
+                                <a href="#" class="word" style="color:yellow">——该梗创造者：某教官？</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-6" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow" id="ops-one" onclick="EndSecond()">"老班长（卷哥）"</a>
+                                </strong><br/>
+                            <strong>
+                                <a href="#" class="word-a" style="color:yellow">——该梗创造者：全班人员？</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a">
+                                    更多
+                                </strong>
+                            </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-6" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"草莓夹心软糖·梦之泪伤·元玮三世"</a>
+                                </strong><br/>
+                            <strong>
+                                <a href="#" class="word" style="color:yellow">——该梗创造者：萌萌</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-a-1" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"——氢氢敲醒沉睡的蹦！"</a>
+                                </strong><br/>
+                            <strong>
+                                <a href="#" class="word-a" style="color:yellow">——该梗创造者：爆齐</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a">
+                                    更多
+                                </strong>
+                            </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-6-1" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"小萝莉"</a>
+                                </strong><br/>
+                            <strong>
+                                <a href="#" class="word" style="color:yellow">——该梗创造者：小萝莉（张xx）</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-a-3" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"/.呼呼"</a>
+                                </strong><br/>
+                            <strong>
+                                <a href="#" class="word-a" style="color:yellow">——该梗创造者：萌萌</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a">
+                                    更多
+                                </strong>
+                            </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-e" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"退钱！！！"</a>
+                                </strong><br/>
+                            <strong>
+                                <a href="#" class="word" style="color:yellow">——该梗创造者：全班不知名人员</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-6-2" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"汤勺（唐少）"</a>
+                                </strong><br/>
+                            <strong>
+                                <a href="#" class="word-a" style="color:yellow">——该梗创造者：肖汪黑子</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a">
+                                    更多
+                                </strong>
+                            </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-e" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"为什么我的眼里常含泪水？"</a>
+                                </strong><br/>
+                            <strong>
+                                    <a href="#" class="word" style="color:yellow">——该梗创造者：emmm..不知道</a>
+                            </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-f" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"狗屁大胡说"</a>
+                                </strong><br/>
+                            <strong>
+                                <a href="#" class="word-a" style="color:yellow">——该梗创造者：张老帅？</a>
+                            </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-b-1" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow" id="inWar" onclick="Conceal()" class="RedManNew">"#@*^%^%^E&#@..*"（这是个梗？）</a>
+                                </strong><br/>
+                            <strong>
+                                <a href="#" class="word" style="color:yellow" id="inP" onclick="GuiChu()">——该梗创造者：未知</a>
+                            </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-g" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"老黄系列表情包"</a>
+                                </strong><br/>
+                            <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：疫情期间闲着没事的爆齐</a>
+                            </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-e" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"齐齐giegie~"</a>
+                                </strong><br/>
+                            <strong>
+                                    <a href="#" class="word" style="color:yellow">——该梗创造者：小萝莉，残星</a>
+                            </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-b-2" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"你妈s了，你全家炸了！"</a>
+                                </strong><br/>
+                            <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：老班长</a>
+                            </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-e-1" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"360°筷子水泥说"</a>
+                                </strong><br/>
+                            <strong>
+                                    <a href="#" class="word" style="color:yellow">——该梗创造者：爆齐，小萝莉，老班长</a>
+                            </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-b" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"傻x吧你~（呕"</a>
+                                </strong><br/>
+                            <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：难道是那位江贼？</a>
+                            </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-e-1" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"你不写我把你头拧下来"</a>
+                                </strong><br/>
+                            <strong>
+                                    <a href="#" class="word" style="color:yellow">——该梗创造者：张老帅，残星</a>
+                            </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                                        <hr style="color:#6495ED">
+
+                                <br/>
+
+                            <div class="h4">
+                                <h4 class="h4-a" style="font-size:40px">
+                                    610老梗！回来吧班上的老经典！
+                                </h4>
+                            </div>
+                                <br/><br/>
+
+                                <div class="conceal" style="float:left">
+                                    <strong id="myText" class="conceal-text">
+                                        ? ? ?
+                                    </strong>
+                                            <br/>
+                                        <strong id="myTextOne" class="conceal-people">
+                                            ——该梗创造者：?
+                                        </strong><br/><br/>
+                                    <div class="others_one">
+                                        <strong class="others_text_one" id="what_one">
+                                            ————神秘的文本，非常创新呢
+                                        </strong>
+                                    </div>
+                                </div>
+                                    <br/><br/><br/><br/>
+                                        <br/><br/><br/>
+                            <div class="conceal-center">
+                                <strong id="targetText" class="conceal-text-center">
+                                    ? ? ?
+                                </strong>
+                                        <br/>
+                                    <strong id="targetPeople" class="conceal-people-center">
+                                        ——该梗创造者：?
+                                    </strong><br/><br/>
+                                <div class="others_two" style="float:right;">
+                                        <strong class="others_text_two" id="what_two">
+                                            神秘的文本，非常创新呢————
+                                        </strong>
+                                </div>
+                            </div>
+                                <br/><br/><br/><br/>
+                                    <br/><br/><br/>
+                                <div class="conceal-three" style="float:left">
+                                    <strong id="targetMeme" class="conceal-text">
+                                        ? ? ?
+                                    </strong>
+                                            <br/>
+                                        <strong><a href="#" id="targetMemePeople" class="conceal-people" onclick="ConcealFourText()">
+                                            ——该梗创造者：?
+                                        </a></strong><br/><br/>
+                                    <div class="others_three">
+                                        <strong class="others_text_three" id="what_three">
+                                            ————神秘的文本，非常创新呢
+                                        </strong>
+                                    </div>
+                                </div>
+                                    <br/><br/><br/><br/>
+                                        <br/><br/><br/>
+                                    <div class="conceal-four" style="float:left">
+                                        <strong id="targetFour" class="conceal-text-four">
+                                            ? ? ?
+                                        </strong>
+                                            <br/>
+                                        <strong id="targetFourPeople" class="conceal-people-four">
+                                            ——该梗创造者：?
+                                        </strong><br/><br/>
+                                        <div class="others_four" style="float:right">
+                                            <strong class="others_text_four" id="what_four" style="float:right">
+                                                神秘的文本，非常创新呢————
+                                            </strong>
+                                        </div>
+                                    </div>
+                                    <br/><br/><br/><br/>
+                                        <br/><br/><br/>
+                                    <div class="conceal-five-new" style="float:left">
+                                        <strong class="conceal-text_five" id="Red">
+                                            ? ? ?
+                                        </strong>
+                                                <br/>
+                                            <strong><a href="#" id="RedMan" class="conceal-people_five" onclick="BiweeklyOrder()">
+                                                ——该梗创造者：?
+                                            </a></strong><br/><br/>
+                                        <div class="others_five">
+                                            <strong class="others_text_five" id="what_five">
+                                                ————神秘的文本，非常创新呢
+                                            </strong>
+                                        </div>
+                                    </div>
+                                    <br/><br/><br/><br/>
+                                        <br/><br/><br/>
+                                    <div class="conceal-six-new" style="float:left">
+                                        <strong id="theLast" class="conceal-text_six">
+                                            ? ? ?
+                                        </strong>
+                                                <br/>
+                                            <strong><a href="#" id="examine" class="conceal-people_six" onclick="EndClassed()">
+                                                ——该梗创造者：?
+                                            </a></strong><br/><br/>
+                                        <div class="others_six" style="float:right">
+					                        <strong id="what_six" class="others_text_six">
+						                        .Text Over Lines.——————
+					                        </strong>
+                                        </div>
+                                    </div>
+                                <br/>
+                            <br/>
+                                <br/>
+                            <br/>
+                                <br/>
+                            <hr style="color:#6495ED">
+
+                            <div class="h5">
+                                <h5 class="h5-a" style="font-size:40px">
+                                    610其他娱乐梗！！
+                                </h5>
+                            </div>
+                                <br/>
+
+                            <div class="star-more" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"野生的荒岛"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word" style="color:yellow">——该梗创造者：爆齐</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-a" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"腊七腊八，冻死你妈"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：暮川</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-python" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"我的win10自学win11系统"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word" style="color:yellow">——该梗创造者：语数双零</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-b" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"我直接梆梆两下"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：爆齐</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-c" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"四分之一的试卷"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word" style="color:yellow">——该梗创造者：语数双零</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+                                
+                            <div class="star-more-b" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"失败是成功他妈"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：残星</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-d" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"从低到高~都低调！"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word" style="color:yellow">——该梗创造者：爆齐，摄影师大大？</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-b" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"小眼睛~看nm！"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：紫月，小萝莉，快乐男孩</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-a" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"迈克尔·曾逊"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word" style="color:yellow">——该梗创造者：肖汪黑子</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-e" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"小蜗牛"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：张老帅and烟雨</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-a-1" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"《指桃为苹果》"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word" style="color:yellow">——该梗创造者：老黄（黄老帅）</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-c-1" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"《著作：梗学》"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：创始人爆齐，接班人肖汪黑子</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-a-1" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"《一筐有1.5个桃》"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word" style="color:yellow">——该梗创造者：肖汪黑子</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-d-1" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"虚脱了"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：老班长，汤勺</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-a-2" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"我现在的心情就像林黛玉骑着电瓶车，载着猴子，在悬崖上唱好汉歌"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-b" style="color:yellow">——该梗创造者：付xx</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-d-2" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"罚战，抄袭语文书，被死刑关进房子里"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：景添（懂得都懂doge</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-a-2" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"《灯冒烟了？？》"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-b" style="color:yellow">——该梗创造者：姚xx</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-d-3" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"黄老乡鸡"（本不想收录滴</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：蛤？九班的？</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-a-2" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"万物皆可蚊香系列"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-b" style="color:yellow">——该梗创造者：姚xx</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-d-3" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"完了，电脑失控了"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-a" style="color:yellow" id="meme" onclick="ConcealText()">——该梗创造者：三个编程老六</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-a-2" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow" id="destruction_remember" onclick="xp()">"Destructionの回忆[doge]"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-b" style="color:yellow" id="rePeople" onclick="EndFirst()">——解锁五梗来开启吧！</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-b" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"小腊肉星期五"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：易雅兰，小萝莉</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-a-2" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"东汉末年闹鸡瘟，江贼大战蔡徐坤"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-b" style="color:yellow">——该梗创造者：全班笙父</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-b" style="float:right">
+                                <strong class="text-a">
+                                    <a href="#" style="color:yellow">"A炸！！！！！"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word-a" style="color:yellow">——该梗创造者：老班长&刘某涵</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="star-more-d" style="float:left">
+                                <strong class="text">
+                                    <a href="#" style="color:yellow">"Good morning! 《Mr.lin》!"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="word" style="color:yellow">——该梗创造者：全班不知名人员</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                                    <br/><br/>
+                                            <hr style="color:#6495ED">
+
+                            <div class="h6">    <!-- &&&&&& 于v1.6.0版本最先更新，且更改二梗解禁方式 &&&&&&& -->
+                                <h6 class="h6-a">
+                                     漫画梗！崭新的老爆齐漫画名场面？
+                                </h6>
+                            </div><hr style="color:#6495ED"><br/>
+
+                            <div class="comics" style="float:left">
+                                <strong class="text-comic">
+                                    <a href="#" style="color:yellow" id="ThreeHeadBrother" onclick="thb()">"_________，_____？自求多福吧！"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="text-comic-op" style="color:yellow">——漫画名场面：三头哥&爆齐</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="comics-l" style="float:right">
+                                <strong class="text-comic-v">
+                                    <a href="#">"我！是你铁哥！"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="text-comic-op-v">——漫画名场面：铁大刀</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="comics-cc" style="float:left">
+                                <strong class="text-comic">
+                                    <a href="#" style="color:yellow">"s的最快的boss是...HIM？？"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="text-comic-op" style="color:yellow">——漫画名场面：小编玩梗名场面</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div>
+
+                                <br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="comics-l" style="float:right">
+                                <strong class="text-comic-v-long">
+                                    <a href="#" id="third">"一集一个形态的男人！鸡星地表碳基生物！"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="text-comic-op-v" id="remember-chicken" onclick="EndThird()">——漫画名场面：小编&三头哥</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div><br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="comics-cc" style="float:left">
+                                <strong class="text-comic">
+                                    <a href="#" style="color:yellow" onclick="toggleMusic('../static/music/moreMusic/千本抄.mp3')">"《千 本 抄》（点击播放，建议漫画）"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="text-comic-op" style="color:yellow">——漫画名场面：迷你屎界の番外篇</a>
+                                </strong><br/><br/>
+                                <div class="open-star">
+                                    <strong class="p">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div><br/><br/>
+                            <br/><br/><br/><br/>
+
+                            <div class="comics-l" style="float:right">
+                                <strong class="text-comic-v">
+                                    <a href="#" id="third">"只会玩板砖的黑帮老大"</a>
+                                </strong><br/>
+                                <strong>
+                                    <a href="#" class="text-comic-op-v">——漫画名场面：柴界，天医生</a>
+                                </strong><br/><br/>
+                                <div class="open-star-a" style="float:right">
+                                    <strong class="p-a" style="float:right">
+                                        更多
+                                    </strong>
+                                </div>
+                            </div><br/><br/>
+                            <br/><br/><br/><br/>
+
+		    </font>
+                </body>
+                    </html>

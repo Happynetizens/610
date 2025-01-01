@@ -1,0 +1,17 @@
+/* 该层叠样式表技术人员：段禹珩 */
+.div{
+    width: 100%;
+    height: 400px;
+    left: 0;
+    top: 0;
+    right: 0;
+    border:2px solid #a0ecff;
+}
+scroll-container {
+    display: block;
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+/* 该层叠样式表技术人员：段禹珩 */

@@ -1,0 +1,3191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>源代码</title>
+        <style>
+            html {
+              scroll-behavior: smooth;
+            }
+        </style>
+        <style>
+            a {
+                text-decoration: none;
+            }
+        </style>
+        <style>
+            pre {
+                background-color: #efeded;
+                padding: 10px;
+                border-radius: 5px;
+                white-space: pre-wrap;
+                overflow-x: auto;
+                border: 1px solid #ffffff;
+                font-family: 'Courier New', monospace; /* 选择代码字体 */
+                color: #333; /* 选择代码文本颜色 */
+                position: relative;
+            }
+        
+            pre::before {
+                content: "";
+                counter-reset: line;
+                position: absolute;
+                top: 0;
+                left: -2em; /* 调整行号位置 */
+                width: 2em; /* 调整行号宽度 */
+                padding-right: 0.5em; /* 调整行号和代码之间的间距 */
+                text-align: right;
+                color: #999; /* 行号颜色 */
+            }
+        
+            pre code {
+                counter-increment: line;
+            }
+        
+            pre code::before {
+                content: counter(line);
+            }
+        
+            box-shadow: 2px 2px 5px #888; /* 添加阴影 */
+        </style>
+        <style>
+            .root {
+                border: 1px solid #000000;
+            }
+        </style>
+        <style>
+            .vision{
+                border: 1px solid #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>目录</h1>
+            <ul>
+                <li>
+                    <a href="#vision">前端</a><ul>
+                        <li><a href="#mainpage">主页面</a></li>
+                        <li><a href="#space">个人页面</a></li>
+                        <li><a href="#610stalk">梗网站</a></li>
+                        <li><a href="#help">帮助</a></li>
+                        <li><a href="#stalkhelp">梗网站帮助</a></li>
+                        <li><a href="#net">留言网站</a></li>
+                        <li><a href="#EmployeeTable">网站员工表</a></li>
+                        <li><a href="#log">日志页面</a> <a href="./610web/log">&ensp;&emsp;&thinsp;&zwnj;&zwj;&ensp;&emsp;&thinsp;&zwnj;&zwj;</a></li>
+                        <li><a href="#r404">路径（文件）报错页面</a></li>
+                        <li><a href="#r500">服务器报错页面</a></li>
+                        <li><a href="#web-keep-alive">网站保活查看</a> <a href="./keep-alive">&ensp;&emsp;&thinsp;&zwnj;&zwj;&ensp;&emsp;&thinsp;&zwnj;&zwj;</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#root">后端</a><ul>
+                        <li><a href="#main">main.py</a></li>
+                        <li><a href="#operation">operation.py</a></li>
+                        <li><a href="#data">data.py</a></li>
+                        <li><a href="#library">library.py</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <hr/>
+        </div>
+        <div>
+            <h1 id="vision">前端</h1>
+            <h2 id="mainpage">主页面</h2>
+            <pre class="vision"><xmp>
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta charset="utf-8">
+                    <link rel="stylesheet" type="text/css" href="../static/CSS/610web.css">
+                        <script src="../static/JavaScript/Time.js"></script>
+                            <script src="../static/JavaScript/Copy.js"></script>
+                                <title>610毕业回忆</title>
+    </head> 
+        <body background="../static/images/background/背景.png" style="background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 108% 100%;">	
+    <div class="header">
+        <h1>610回忆网站，校园中忘不掉的回忆..</h1>
+    </div><br/><br/>
+
+    <div class="bar">
+        <strong><a href="./help" class="bar-txt" target="_blank">网站帮助</a></strong>
+        <strong><a href="./WET" class="bar-txt-a" target="_blank">网站来源</a></strong>
+        <strong><a href="./610stalk" class="bar-txt-b">610梗网站</a></strong>
+        <strong><a href="./net" class="bar-txt-c">更多留言</a></strong>
+    </div>
+
+    <div class="graduate">
+        <strong class="txt-yuwen">第六单元导读</strong>
+            <strong class="time-a" id="time1">
+                {time}
+            </strong>
+        <br><br/><br/><div class="ssc">
+        <strong class="ssc-txt">
+            那些种在校园里长不大的记忆，那些校园里忘不掉的纯真......
+        </strong>
+    </div>
+            <div class="ssc-button">
+                <strong class="ssc-copy">
+                    <a href="#" onclick="copyToClipboard('《那些种在校园里长不大的记忆，那些校园里忘不掉的纯真 ---加油，少年！》')">
+                        复制
+                    </a>
+                </strong>
+            </div><br><br><br><br><br>
+        <div class="ssc-bottom">
+            <strong style="padding:15px;color:blue;font-size:20px;">
+                ———
+            </strong>
+        </div><br><br>
+            <img src="../static/images/photo/段禹珩.png" class="img">
+        <strong class="txt">段禹珩</strong>
+        <strong class="time" id="time2">
+                {time}
+            </strong>
+        <br/><br/><br/>
+                    <div class="ssc-ini-2">
+        <strong class="ssc-txt">
+            110、210、310...六年时光如白驹过隙，转眼就要毕业了。长大以后，我们必将各奔东西。
+            <br/>
+            但愿那时，我们都还会记得对方，愿我们缘断情不断！
+        </strong>
+    </div>
+        <br/><br/><br/><br/><br/><br/>
+        <style>
+            .copy6{
+                Margin-left: 10%;
+            }
+        </style>
+        <div class="ssc-button-a copy6">
+            <strong class="ssc-copy copy6">
+                <a href="#" onclick="copyToClipboard('《110、210、310...六年时光如白驹过隙，转眼就要毕业了... ---真是时光匆匆啊...长大以后，我们必将各奔东西..、当然，但愿那时，我们都还会记得对方，愿我们缘断情不断！》')">
+                    复制
+                </a>
+            </strong>
+        </div>
+    <br>
+        <div class="ssc-bottom">
+            <strong style="padding:15px;color:blue;font-size:20px;">
+                ———
+            </strong>
+        </div><br><br>
+        <img src="../static/images/photo/段禹珩.png" class="img">
+        <strong class="txt">段禹珩</strong>
+        <strong class="time" id="time3">
+                {time}
+        </strong><br/><br/><br/>
+            <div class="ssc-ini">
+        <strong class="ssc-txt-a">
+            毕业了，也掏不出什么东西赠礼，“江南无所有，聊赠一枝春”，就编一个网站留住我们的回忆！  
+        </strong>
+    </div>
+    <br/><br/><br/><br/><br/>
+        <div class="ssc-bottom">
+            <div class="ssc-button-a">
+                <strong class="ssc-copy">
+                    <a href="#" onclick="copyToClipboard('《毕业了，也掏不出什么东西赠礼，“江南无所有，聊赠一枝春”，就编一个网站留住我们的回忆！---情以物迁，辞以情发》')">
+                        复制
+                    </a>
+                </strong>
+            </div>
+            <strong style="padding:15px;color:blue;font-size:20px;">
+                ———
+            </strong>
+
+        </div><br><br>
+    </div>
+    <br><br><br><br>
+    <h2>班级照片浏览</h2><br/><br/><br/><br/>
+    <div>
+        <img src="../static/images/images/img1.png" width="174" height="138" style="margin-right:10px;">
+            <img src="../static/images/images/img2.png" width="174" height="138" style="margin-right:10px;">
+                <img src="../static/images/images/img3.png" width="174" height="138" style="margin-right:10px;">
+                    <img src="../static/images/images/img4.png" width="174" height="138" style="margin-right:10px;">
+                        <img src="../static/images/images/img5.png" width="217.5" height="135.5" style="margin-right:10px;">
+                            <img src="../static/images/images/img6.png" width="174" height="138" style="margin-right:10px;">
+    </div>
+    <br/>
+    <h3>610全体成员（毕业啦！）</h3><br/><br/><br/>
+    <p style="font-family:Simson;color:#57bceb;font-size:20px;">
+        <div class="people">
+            <img src="../static/images/photo/黄兰婷.png" class="people-img">
+                <strong><a href="./01黄兰婷" class="people-href">1号 舞蹈达人 黄兰婷</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/江星汉.png" class="people-img-a">
+                <strong><a href="./02江星汉" class="people-href-a">2号 下棋高手 江星汉</a></strong>
+        </div><br/><br/>
+        <div class="people-boom">
+            <img src="../static/images/photo/蒋俊峰.png" class="people-img">
+                <strong><a href="./03蒋俊峰" class="people-href">3号 &nbsp&nbsp&nbsp社牛漫画家,可爱初陽子 &nbsp&nbsp&nbsp爆齐</a></strong>
+        </div><br/><br/>
+        <div class="people-l">
+            <img src="../static/images/photo/赖韵臣.png" class="people-img-a">
+                <strong><a href="./04赖韵臣" class="people-href-cpp-a">4号 羽毛球王子 赖韵臣</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/李佳颖.png" class="people-img">
+                <strong><a href="./05李佳颖" class="people-href">5号 朗诵声优 李佳颖</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/李景添" class="people-img-a">
+                <strong><a href="./06李景添" class="people-href-a">6号 外交达人 李景添</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/曾沁棠.png" class="people-img">
+                <strong><a href="./07曾沁棠" class="people-href">7号 老班长 曾沁棠</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/曾译琨.png" class="people-img-a">
+                <strong><a href="./08曾译琨" class="people-href-a">8号 心心向简 曾译琨</a></strong>
+        </div><br/><br/>
+        <div class="people">    
+            <img src="../static/images/photo/李芷萱.png" class="people-img">
+                <strong><a href="./09李芷萱" class="people-href">9号 孤独之星 李芷萱</a></strong>
+        </div><br/><br/>
+        <div class="people-a">  
+            <img src="../static/images/photo/李卓翰.png" class="people-img-a">
+                <strong><a href="./10李卓翰" class="people-href-a">10号 FBI第一线 李卓翰</a></strong>
+        </div><br/><br/>
+        <div class="people">   
+            <img src="../static/images/photo/刘沛珊.png" class="people-img">
+                <strong><a href="./11刘沛珊" class="people-href">11号 萝莉声线 刘沛珊</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/刘梓涵.png" class="people-img-a">
+                <strong><a href="./12刘梓涵" class="people-href-a">12号 灌篮高手 刘梓涵</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/芦嘉悦.png" class="people-img">
+                <strong><a href="./13芦嘉悦" class="people-href">13号 爆齐的妈 芦嘉悦</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/陆佳贝.png" class="people-img-a">
+                <strong><a href="./14陆佳贝" class="people-href-a">14号 下棋第二人 陆佳贝</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/马辰熠.png" class="people-img">
+                <strong><a href="./15马辰熠" class="people-href">15号 帅气Mark 马辰熠</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/牛浩歌.png" class="people-img-a">
+                <strong><a href="./16牛浩歌" class="people-href-a">16号 特遣队员 牛浩歌</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/任隆昕.png" class="people-img">
+                <strong><a href="./17任隆昕" class="people-href">17号 班级成员 任隆昕</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/唐元玮.png" class="people-img-a">
+                <strong><a href="./18唐元玮" class="people-href-a">18号 元玮三世 唐元玮</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/陶静涵.png" class="people-img">
+                <strong><a href="./19陶静涵" class="people-href">19号 文静优雅 陶静涵</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/田鑫怡.png" class="people-img-a">
+                <strong><a href="./20田鑫怡" class="people-href-a">20号 学霸一号 田鑫怡</a></strong>
+        </div><br/><br/>
+        <div class="people-cpp">
+            <img src="../static/images/photo/涂辰开.png" class="people-img">
+                <strong><a href="./21涂辰开" class="people-href-cpp">21号 帅气少年 涂辰开</a></strong>
+        </div><br/><br/>
+        <div class="people-x">
+            <img src="../static/images/photo/涂辰心.png" class="people-img-a">
+                <strong><a href="./22涂辰心" class="people-href-cpp-a">22号 一生所爱 涂辰心</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/汪子涵.png" class="people-img">
+                <strong><a href="./23汪子涵" class="people-href">23号 舞蹈第二人 汪子涵</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/王尚敬.png" class="people-img-a">
+                <strong><a href="./24王尚敬" class="people-href-a">24号 社会残星 王尚敬</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/王梓萌.png" class="people-img">
+                <strong><a href="./25王梓萌" class="people-href">25号 可爱萌萌 王梓萌</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/吴锦轩.png" class="people-img-a">
+                <strong><a href="./26吴锦轩" class="people-href-a">26号 无敌轩少 吴锦轩</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/吴心怡.png" class="people-img">
+                <strong><a href="./27吴心怡" class="people-href">27号 英语能手 吴心怡</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/吴心悦.png" class="people-img-a">
+                <strong><a href="./28吴心悦" class="people-href-a">28号 英语能手 吴心悦</a></strong>
+        </div><br/><br/>
+        <div class="people-cpp">
+            <img src="../static/images/photo/陈秭悦.png" class="people-img">
+                <strong><a href="./29陈秭悦" class="people-href-cpp">29号 帅气少女 陈秭悦</a></strong>
+        </div><br/><br/>
+        <div class="people-xi">
+            <img src="../static/images/photo/肖子墨.png" class="people-img-a">
+                <strong><a href="./30肖子墨" class="people-href-cpp-xi">30号 帅哥肖汪 肖子墨</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/陈梓虞.png" class="people-img">
+                <strong><a href="./31陈梓虞" class="people-href">31号 orange鱼 陈梓虞</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/熊梓琪.png" class="people-img-a">
+                <strong><a href="./32熊梓琪" class="people-href-a">32号 刁之男友 熊梓琪</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/程书文.png" class="people-img">
+                <strong><a href="./33程书文" class="people-href">33号 爆齐好友 程书文</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/姚沐珂.png" class="people-img-a">
+                <strong><a href="./34姚沐珂" class="people-href-a">34号 姚不可及 姚沐珂</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/程天翼.png" class="people-img">
+                <strong><a href="./35程天翼" class="people-href">35号 搞笑学霸 程天翼</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/易雅兰.png" class="people-img-a">
+                <strong><a href="./36易雅兰" class="people-href-a">36号 星期五 易雅兰</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/程惜蕊.png" class="people-img">
+                <strong><a href="./37程惜蕊" class="people-href">37号 刁之好友 程惜蕊</a></strong>
+        </div><br/><br/>
+        <div class="people-xi">
+            <img src="../static/images/photo/袁子衿.png" class="people-img-a">
+                <strong><a href="./38袁子衿" class="people-href-cpp-xi">38号 袁绍喵喵 袁子衿</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/张宸硕.png" class="people-img">
+                <strong><a href="./39张宸硕" class="people-href">39号 小萝莉 张宸硕</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/张轩诚.png" class="people-img-a">
+                <strong><a href="./40张轩诚" class="people-href-a">40号 帅气轩二 张轩诚</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/张雅涵.png" class="people-img">
+                <strong><a href="./41张雅涵" class="people-href">41号 文静优雅 张雅涵</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/张梓若.png" class="people-img-a">
+                <strong><a href="./42张梓若" class="people-href-a">42号 怼人高手 张梓若</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/邓欣宇.png" class="people-img">
+                <strong><a href="./43邓欣宇" class="people-href">43号 社会邓姐 邓欣宇</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/邓越兮.png" class="people-img-a">
+                <strong><a href="./44邓越兮" class="people-href-a">44号 大方小邓 邓越兮</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/刁溪彧.png" class="people-img">
+                <strong><a href="./45刁溪彧" class="people-href">45号 野生大刁 刁溪彧</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/董地.png" class="people-img-a">
+                <strong><a href="./46董地" class="people-href-a">46号 班级土豪 董地</a></strong>
+        </div><br/><br/>
+        <div class="people-x-a">
+            <img src="../static/images/photo/段禹珩.png" class="people-img">
+                <strong><a href="./47段禹珩" class="people-href-cpp">47号 后端之神 段禹珩</a></strong>
+        </div><br/><br/>
+        <div class="people-a">
+            <img src="../static/images/photo/方博涵.png" class="people-img-a">
+                <strong><a href="./48方博涵" class="people-href-a">48号 开朗男孩 方博涵</a></strong>
+        </div><br/><br/>
+        <div class="people">
+            <img src="../static/images/photo/付婉瑜.png" class="people-img">
+                <strong><a href="./49付婉瑜" class="people-href">49号 凹凸画师 付婉瑜</a></strong>
+        </div><br/><br/>
+        <div class="people-l">
+            <img src="../static/images/photo/赵梓琪.png" class="people-img-a">
+                <strong><a href="./50赵梓琪" class="people-href-cpp-a">50号 得力助手 赵梓琪</a></strong>
+        </div><br/><br/><br/>
+        <br/>
+    </p>
+    </body>
+</html>
+
+<!--
+
+【这就是毕业后的景象吗...】
+【等等，喂！喂！你为什么要看源代码！！！】
+【齐】啊西..额额额..随你吧，反正我们已分道扬镳...
+【愿能在彼岸相见，愿能在远方回忆..】
+【旅船只是遮盖未来的影像，调考和毕业考才是指引着我们的命运。】
+【该网站是毕业后的回忆网站，愿我们未来还会再相聚！】
+
+# 大分类
+前端（你看的到的）：赖韵臣，爆齐，段禹珩，张轩诚
+后端（你看的到的）：段禹珩
+
+# 各分工技术支持
+总技术支持：段禹珩，赖韵臣，爆齐
+网站开发：段禹珩
+梗网站技术支持：爆齐
+个人网站技术支持：段禹珩
+后端运算技术支持：段禹珩
+前端运算技术支持：赖韵臣，爆齐，段禹珩
+主网站技术支持：爆齐，段禹珩
+登录技术支持：段禹珩
+主网站css支持：爆齐
+主网站Javascript支持：爆齐
+个人网站css支持：段禹珩
+
+# 功能编写
+点赞功能（后端，前端）：段禹珩
+留言功能（后端，前端）；段禹珩
+data数据存储（后端，前端）：段禹珩（后端&前端）
+password密码功能（后端）：段禹珩
+return后端返回（后端）：段禹珩
+日志（后端，前端）：段禹珩
+import-function运算（后端）：段禹珩
+re后端拼接（后端）：段禹珩
+framework框架运行（前端）：段禹珩
+css_style美化（前端）：爆齐，张轩诚
+html总网页编辑（前端）：段禹珩，爆齐
+?xml来源：自带！
+
+Python编写版本：3.7.8
+Python运行版本：3.11.4
+
+# 关于编写
+编写问题解答来源：零声教学，小莓用AI，chatgpt镜像网站
+编写图片来源：610qq群
+编写音乐来源：MyFreeMP3（https://tool.liumingye.cn/music/），铜钟（https://tonzhon.com/）
+编写信息来源：610集体成员之努力
+编写信息收集：python收集信息U盘程序， 腾讯收集表
+编写时所使用的程序：PyCharm，VsCode，Python3.7.8(&Python3.11.4)
+编写时所使用的浏览器调试：Microsoft Edge Web，Google Chrome
+编写时所使用的翻译：百度翻译
+参与编写该网站：残星（算不上），吴锦轩（算不上），张轩诚（几乎算不上）
+
+# 关于该网站
+当前主网站Javascript版本：ver1.4.6_Js
+当前主网站css版本：ver2.2.2_css
+当前主网站html版本：ver3.3.3_Web
+当前版本最后更新时间：2023-7-17
+
+##########################################
+##日志页面链接自己找，偏心的后端以告诉部分人##
+##########################################
+
+-->
+            </xmp></pre>
+            <hr/>
+            <h2 id="space">个人页面</h2>
+            <pre class="vision"><xmp>
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{id}}{{name}}</title>
+        <link href="../static/images/ico/{{name}}.ico" rel="shortcut icon">
+        {{background}}
+        <audio autoplay="autoplay" loop="loop" preload="auto" src="../static/music/person/{{music}}"></audio>
+        <link rel="stylesheet" type="text/css" href="../static/CSS/留言框.css">
+		<link rel="stylesheet" type="text/css" href="../static/CSS/发送按钮.css">
+        <link rel="stylesheet" type="text/css" href="../static/CSS/转盘特效.css">
+        <link rel="stylesheet" type="text/css" href="../static/CSS/点赞.css">
+        <link rel="stylesheet" type="text/css" href="../static/CSS/评论框.css">
+        <link rel="stylesheet" type="text/css" href="../static/CSS/登录.css">
+        <link rel="stylesheet" type="text/css" href="../static/CSS/图片.css">
+        <link rel="stylesheet" type="text/css" href="../static/CSS/typeface.css">
+        <style>a{text-decoration: none;}</style>
+    </head>
+    <body onload="Fn()" class="body">
+        <font face="{{typeface}}" size="5">
+            <div>
+                <a href="../">←回主页</a>
+                <h1>{{id}}{{name}}</h1>
+                <img src="../static/images/photo/{{name}}.png" class="photo">
+                <br/>
+                {{leave}}
+                <h2>点赞功能</h2>
+                <p id="count">{{good}}个赞</p>
+                <form action="" name="good_p" method="post">
+                    <button id="likeBtn" class="btn" method="post" onclick="like()" type="submit" name="action" value="good_p">点赞</button>
+                </form>
+                <h2>个人资料</h2>
+                {{birthday}}{{constellation}}{{hobby}}{{motto}}{{goodfriend}}{{QQnumber}}
+            </div>
+            <div>
+                <h2>留言板</h2>
+                <form action="" name="comment" method="post" name="action" value="commend">
+                    <div class="input-container" method="post">
+                        <input type="text" name="comment" required="">
+                        <label class="label">留言框</label>
+                        <div class="underline">键入留言信息</div>
+                    </div>
+                    <div>
+                        <input placeholder="姓名" type="text" name="name" required="" class="logon-name">
+                        <input placeholder="密码" type="password" name="password" required="" class="logon-password">
+                    </div>
+                    <br/>
+                    <button id="btn" method="post" type="submit" name="action" value="sending">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <span>发送</span>
+                    </button>
+                    <div id="sending"></div>
+                </form>
+                <br/>
+                <div class="div">
+                    <scroll-container>{{comment}}</scroll-container>
+                </div>
+            </div>
+        </font>
+        {{specialeffects}}
+    </body>
+</html>
+<!--该网站技术人员：段禹珩-->
+
+            </xmp></pre>
+            <hr/>
+            <h2 id="610stalk">梗网站</h2>
+            <pre class="vision"><xmp>
+    <! -- 该网页由爆齐提供技术 -->
+    <! -- 六年了啊，带你回顾历代火遍班上的610梗吧 -->
+        <! -- 【610os及.INcHd.已接入，可开始使用。】 -->
+            <! -- 该网页当前版本：v1.5.8.00.01_WebInter_FinalVersion_FiveConceal_andNewMeme:: -->
+                <! -- 梗网站的最终版本就完工啦！祝610友谊永远不散！ -->
+
+<!DOCTYPE html>
+    <html lang="zh-CH">
+<head>
+        <meta charset="utf-8">
+<!--"../static/CSS/"-->
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" type="text/css" href="../static/CSS/动态_css3导航栏.css">
+                    <link rel="stylesheet" type="text/css" href="../static/CSS/搜索栏.css">
+                        <link rel="stylesheet" type="text/css" href="../static/CSS/导航栏标题_颜色.css">
+                            <link rel="stylesheet" type="text/css" href="../static/CSS/超链接色系.css">
+                                <link rel="stylesheet" type="text/css" href="../static/CSS/梗_显示框.css">
+                                    <link rel="stylesheet" type="text/css" href="../static/CSS/侧边栏_610os剧情网.css">
+                                        <link rel="icon" href="../static/images/picture/坤.png" size="16x16">
+                        <title>610meme大全！</title>
+        
+                <style id="pageStyle">
+
+                    /* 去除鼠标悬停链接时的下划线 */
+
+                    a:hover {
+                        text-decoration: none;
+                    }
+
+                    body {
+                        /*"../static/images/picture/"*/
+                        background-image: url("../static/images/picture/610梗网 x 星穹空间404 梗网页背景2.0.jpg");
+                        background-repeat: no-repeat;
+                        background-attachment: fixed;
+                        background-size: 104.4% 105.7%;
+                    }
+                </style>
+
+</head>
+        <body onload="addOnClickToLink()">
+
+        <div class="sidebar_os-musicbar">
+            <strong class="sidebar_os-music">
+                背景<br/>音乐
+    <!--"../static/music/meme/"-->
+            </strong>
+                <strong class="sidebar_os-bgm1">
+                    <a href="#" onclick="toggleMusic('../static/music/meme/锦里.mp3')" style="color:yellow">锦里</a>
+                </strong>
+                    <strong class="sidebar_os-bgm2">
+                        <a href="#" onclick="toggleMusic('../static/music/meme/春节序曲.mp3')" style="color:yellow">春节序曲</a>
+                    </strong>
+                        <strong class="sidebar_os-bgm3">
+                            <a href="#" onclick="toggleMusic('../static/music/meme/好运来.mp3')" style="color:yellow">好运来</a>
+                        </strong>
+                            <strong class="sidebar_os-bgm4">
+                                <a href="#" onclick="toggleMusic('../static/music/meme/好日子.mp3')" style="color:yellow">好日子</a>
+                            </strong>
+                                <strong class="sidebar_os-bgm5">
+                                    <a href="#" onclick="toggleMusic('../static/music/meme/Distorted Fate.mp3')" style="color:yellow">魔王曲1</a>
+                                </strong>
+                                    <strong class="sidebar_os-bgm6">
+                                        <a href="#" onclick="toggleMusic('../static/music/meme/retribution.mp3')" style="color:yellow">魔王曲2</a>
+                                    </strong>
+                                        <strong class="sidebar_os-bgmover">
+                                            <a href="#" onclick="toggleMusic(null)" style="color:yellow">停止播放当前音乐</a>
+                                        </strong>
+                                            <strong class="sidebar_os-other">
+                                                <a href="#" onclick="toggleDiv(this)" style="color:yellow">更多</a>
+                                            </strong>
+        </div>
+            <div id="myDiv" class="sidebar_os-musicbar_conceal" style="display:none;">
+                <strong class="sidebar_os-music_conceal">
+                    更多<br/>音乐
+                </strong>
+                    <strong class="sidebar_os-conceal-bgm1">
+                        <a href="#" onclick="toggleMusic('../static/music/meme/《毒 评 论~~！》.mp3')" style="color:yellow">毒评论!</a>
+                    </strong>
+                        <strong class="sidebar_os-conceal-bgm2">
+                            <a href="#" onclick="toggleMusic('../static/music/meme/千本樱.mp3')" style="color:yellow">千本樱儿</a>
+                        </strong>
+                            <strong class="sidebar_os-conceal-bgm3">
+                                <a href="#" onclick="toggleMusic('../static/music/meme/银行不妙曲.mp3')" style="color:yellow">银行不妙曲</a>
+                            </strong>
+                                <strong class="sidebar_os-conceal-bgm4">
+                                    <a href="#" onclick="toggleMusic('../static/music/meme/核爆.mp3')" style="color:yellow">核爆小曲</a>
+                                </strong>
+                                    <strong class="sidebar_os-conceal-bgm5">
+                                        <a href="#" onclick="toggleMusic('../static/music/meme/压迫感！.mp3')" style="color:yellow">燃爆全场!</a>
+                                    </strong>
+                                        <strong class="sidebar_os-conceal-bgm6">
+                                            <a href="#" onclick="toggleMusic('../static/music/meme/红眼不妙曲.mp3')" style="color:yellow">红眼曲?</a>
+                                        </strong>
+                                            <strong class="sidebar_os-conceal-bgm7">
+                                                <a href="#" onclick="toggleMusic('../static/music/meme/Wake.mp3')" style="color:yellow">Wake现场</a>
+                                            </strong>
+                                                <strong class="sidebar_os-conceal-bgm8">
+                                                    <a href="#" onclick="toggleMusic('../static/music/meme/坤.mp3')" style="color:yellow">坤太美</a>
+                                                </strong>
+            </div>
+
+
+        <div class="sidebar_os">
+            <strong class="sidebar_os-text">
+                侧栏
+            </strong>
+            <strong class="sidebar_os-chapter">
+                    <a href="../templates/renew.html" style="color:yellow">
+                        更新日志</a>
+                </strong>
+                    <strong class="sidebar_os-baoqi">
+                        <a href="" style="color:yellow">
+                        关于该网站编写者..</a>
+                    </strong>
+        </div>
+
+            <! -- 导入JavaScript文件 -->
+                <!--"../static/JavaScript/"-->
+
+            <script src="../static/JavaScript/FunctionBgm.js"></script>
+                <script src="../static/JavaScript/FunctionConceal.js"></script>
+                    <script src="../static/JavaScript/Display.js"></script>
+                        <script src="../static/JavaScript/ConcealMeme.js"></script>
+                            <script src="../static/JavaScript/ConcealPeople.js"></script>
+                                <script src="../static/JavaScript/ConcealFour.js"></script>
+                                    <script src="../static/JavaScript/hrefAudioData.js"></script>
+
+            <font face="STHeiTi" size="5" color="#8A2BE2">
+                <div class="header">
+                            <h1 class="linear-gradient-text"
+                                style="text-align:center;font-size:60px">
+                                六年生活，满满的回忆，610梗网站！
+                            </h1>
+                </div>
+                    <div class="div">
+                        <div class="div-a">
+                        <img src="../static/images/picture/导航栏.png" class="img" width="30" height="20">
+                        <a href="../" class="href">返回主页面</a>
+                        <a href="" class="href-a">登录梗网页</a>
+                        <a href="" class="href-b">加入新梗</a>
+                        <a href="" class="href-c">加入梗qq群</a>
+                        <a href="stalkhelp" class="href-d">梗网页帮助</a>
+                        <a href="" class="href-e">610_osIN网</a>
+                        <a href="" class="href-f">反馈"特性"？</a>
+                </div>
+                    </div>
+                            <br/>
+
+                        <div class="box">
+                            <input type="text" class="input" placeholder="搜索你想康的梗~">
+                            <input type="button" value="搜索" class="button">
+                        </div>
+
+                <br/>
+
+                <! -- 正文 -->
+
+
+            <hr style="color:#6495ED">
+
+                <div class="meme-p">
+                        <p style="text-align:center">
+                            <strong style="font-size:30px">
+                                <a href="#" onclick="changeText()" id="refresh-link"
+                                class="music-link">梗</a>
+                        ，是一种网络用语，是一种特有的文化精神
+                        <br/>
+                            <br/>
+                                <br/>
+                        在610中，也有着许许多多的梗！！
+                        <br/>
+                            <br/>
+                                <br/>
+                        610中，梗被称为meme，其中经典也十分的多!
+                        <br/>
+                            <br/>
+                                <br/>
+                                <strong id="inTo" style="font-size: 30px;
+                        background: -webkit-linear-gradient(left, #33FFFF, #0000CC);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;">
+                    六年期间，梗之不间断产也<br/></strong>
+                        <br/>
+                            <br/><strong id="inFor">
+                        让我们来看看这六年都诞生了哪些"经典"吧！！
+                    </strong>
+                    </strong>
+                        </p>
+                </div>
+                <br/>
+                <div class="h3">
+                    <h3 class="h3-a">
+                    610火区梗，永远无法超越的经典！
+                </h3>
+                    </div>
+                <br/>
+
+                        <div class="star" style="float:left">
+                                <strong class="text">
+                                    <a href="" style="color:yellow">"可能需要"</a>
+                                </strong><br/>
+                            <strong>
+                                <a href="" class="word" style="color:yellow">——该梗创造者：付xx</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                                </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-a" style="float:right">
+                                <strong class="text-a">
+                                    <a href="" style="color:yellow">"恩（二声）~~~？"</a>
+                                </strong><br/>
+                            <strong>
+                                <a href="" class="word-a" style="color:yellow">——该梗创造者：emo柯南及全班不知名人员</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-b" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"从某种意义来讲"</a>
+                            </strong><br/>
+                        <strong>
+                            <a href="" class="word" style="color:yellow">——该梗创造者：劳动sensei</a>
+                        </strong><br/><br/>
+                        <div class="open-star">
+                            <strong class="p">
+                                更多
+                            </strong>
+                        </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-a-2" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"老年养生课"</a>
+                            </strong><br/>
+                        <strong>
+                            <a href="" class="word-a" style="color:yellow">——该梗创造者：小萝莉（张xx）</a>
+                        </strong><br/><br/>
+                        <div class="open-star-a" style="float:right">
+                            <strong class="p-a">
+                                更多
+                            </strong>
+                        </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-b" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"承担责任！！！"</a>
+                            </strong><br/>
+                        <strong>
+                            <a href="" class="word" style="color:yellow">——该梗创造者：某教官？</a>
+                        </strong><br/><br/>
+                        <div class="open-star">
+                            <strong class="p">
+                                更多
+                            </strong>
+                        </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-6" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"老班长（卷哥）"</a>
+                            </strong><br/>
+                            <! -- 老班长特别彩蛋 -->
+                                <strong class="lao-ban-zhang">
+                                    <a href="" style="opacity:0">作者爱听的歌~</a>
+                                </strong>
+                            <! -- 老班长特别彩蛋 -->
+                        <strong>
+                            <a href="" class="word-a" style="color:yellow">——该梗创造者：全班人员？</a>
+                        </strong><br/><br/>
+                        <div class="open-star-a" style="float:right">
+                            <strong class="p-a">
+                                更多
+                            </strong>
+                        </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-6" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"草莓夹心软糖·梦之泪伤·元玮三世"</a>
+                            </strong><br/>
+                        <strong>
+                            <a href="" class="word" style="color:yellow">——该梗创造者：萌萌</a>
+                        </strong><br/><br/>
+                        <div class="open-star">
+                            <strong class="p">
+                                更多
+                            </strong>
+                        </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-a-1" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"——氢氢敲醒沉睡的蹦！"</a>
+                            </strong><br/>
+                        <strong>
+                            <a href="" class="word-a" style="color:yellow">——该梗创造者：爆齐</a>
+                        </strong><br/><br/>
+                        <div class="open-star-a" style="float:right">
+                            <strong class="p-a">
+                                更多
+                            </strong>
+                        </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-6-1" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"小萝莉"</a>
+                            </strong><br/>
+                        <strong>
+                            <a href="" class="word" style="color:yellow">——该梗创造者：小萝莉（张xx）</a>
+                        </strong><br/><br/>
+                        <div class="open-star">
+                            <strong class="p">
+                                更多
+                            </strong>
+                        </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-a-3" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"/.呼呼"</a>
+                            </strong><br/>
+                        <strong>
+                            <a href="" class="word-a" style="color:yellow">——该梗创造者：萌萌</a>
+                        </strong><br/><br/>
+                        <div class="open-star-a" style="float:right">
+                            <strong class="p-a">
+                                更多
+                            </strong>
+                        </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-e" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"退钱！！！"</a>
+                            </strong><br/>
+                        <strong>
+                            <a href="" class="word" style="color:yellow">——该梗创造者：全班不知名人员</a>
+                        </strong><br/><br/>
+                        <div class="open-star">
+                            <strong class="p">
+                                更多
+                            </strong>
+                        </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-6-2" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"汤勺（唐少）"</a>
+                            </strong><br/>
+                        <strong>
+                            <a href="" class="word-a" style="color:yellow">——该梗创造者：肖汪黑子</a>
+                        </strong><br/><br/>
+                        <div class="open-star-a" style="float:right">
+                            <strong class="p-a">
+                                更多
+                            </strong>
+                        </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-e" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"为什么我的眼里常含泪水？"</a>
+                            </strong><br/>
+                        <strong>
+                                <a href="" class="word" style="color:yellow">——该梗创造者：emmm..不知道</a>
+                        </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-f" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"狗屁大胡说"</a>
+                            </strong><br/>
+                        <strong>
+                            <a href="" class="word-a" style="color:yellow">——该梗创造者：张老帅？</a>
+                        </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-b-1" style="float:left">
+                            <strong class="text">
+                                <a href="#" style="color:yellow" id="inWar" onclick="Conceal()">"#@*^%^%^E&#@..*"（这是个梗？）</a>
+                            </strong><br/>
+                        <strong>
+                            <a href="#" class="word" style="color:yellow" id="inP">——该梗创造者：未知</a>
+                        </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-g" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"老黄系列表情包"</a>
+                            </strong><br/>
+                        <strong>
+                                <a href="" class="word-a" style="color:yellow">——该梗创造者：疫情期间闲着没事的爆齐</a>
+                        </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-e" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"齐齐giegie~"</a>
+                            </strong><br/>
+                        <strong>
+                                <a href="" class="word" style="color:yellow">——该梗创造者：小萝莉，残星</a>
+                        </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-b-2" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"你妈s了，你全家炸了！"</a>
+                            </strong><br/>
+                        <strong>
+                                <a href="" class="word-a" style="color:yellow">——该梗创造者：老班长</a>
+                        </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-e-1" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"360°筷子水泥说"</a>
+                            </strong><br/>
+                        <strong>
+                                <a href="" class="word" style="color:yellow">——该梗创造者：爆齐，小萝莉，老班长</a>
+                        </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-b" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"傻x吧你~（呕"</a>
+                            </strong><br/>
+                        <strong>
+                                <a href="" class="word-a" style="color:yellow">——该梗创造者：难道是那位江贼？</a>
+                        </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-e-1" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"你不写我把你头拧下来"</a>
+                            </strong><br/>
+                        <strong>
+                                <a href="" class="word" style="color:yellow">——该梗创造者：张老帅，残星</a>
+                        </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                                    <hr style="color:#6495ED">
+
+                            <br/>
+
+                        <div class="h4">
+                            <h4 class="h4-a" style="font-size:40px">
+                                610老梗！回来吧班上的老经典！
+                            </h4>
+                        </div>
+                            <br/><br/>
+
+                            <div class="conceal" style="float:left">
+                                <strong id="myText" class="conceal-text">
+                                    ? ? ?
+                                </strong>
+                                        <br/>
+                                    <strong id="myTextOne" class="conceal-people">
+                                        ——该梗创造者：?
+                                    </strong>
+                            </div>
+                                <br/><br/>
+                                    <br/><br/>
+                        <div class="conceal-center">
+                            <strong id="targetText" class="conceal-text-center">
+                                ? ? ?
+                            </strong>
+                                    <br/>
+                                <strong id="targetPeople" class="conceal-people-center">
+                                    ——该梗创造者：?
+                                </strong>
+                        </div>
+                            <br/><br/>
+                                <br/><br/>
+                            <div class="conceal-three" style="float:left">
+                                <strong id="targetMeme" class="conceal-text">
+                                    ? ? ?
+                                </strong>
+                                        <br/>
+                                    <strong><a href="#" id="targetMemePeople" class="conceal-people" onclick="ConcealFourText()">
+                                        ——该梗创造者：?
+                                    </a></strong>
+                            </div>
+                                <br/><br/>
+                                    <br/><br/>
+                                <div class="conceal-four" style="float:left">
+                                    <strong id="targetFour" class="conceal-text-four">
+                                        ? ? ?
+                                    </strong>
+                                        <br/>
+                                    <strong id="targetFourPeople" class="conceal-people-four">
+                                        ——该梗创造者：?
+                                    </strong>
+                                </div>
+                        <br/>
+                            <br/>
+                        <br/>
+                            <br/>
+                        <hr style="color:#6495ED">
+
+                        <div class="h5">
+                            <h5 class="h5-a" style="font-size:40px">
+                                610其他娱乐梗！！
+                            </h5>
+                        </div>
+                            <br/>
+
+                        <div class="star-more" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"野生的荒岛"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word" style="color:yellow">——该梗创造者：爆齐</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-a" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"腊七腊八，冻死你妈"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word-a" style="color:yellow">——该梗创造者：暮川</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-python" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"我的win10自学win11系统"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word" style="color:yellow">——该梗创造者：语数双零</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-b" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"我直接梆梆两下"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word-a" style="color:yellow">——该梗创造者：爆齐</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-c" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"四分之一的试卷"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word" style="color:yellow">——该梗创造者：语数双零</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+                            
+                        <div class="star-more-b" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"失败是成功他妈"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word-a" style="color:yellow">——该梗创造者：残星</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-d" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"从低到高~都低调！"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word" style="color:yellow">——该梗创造者：爆齐，摄影师大大？</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-b" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"小眼睛~看nm！"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word-a" style="color:yellow">——该梗创造者：紫月，小萝莉，快乐男孩</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-a" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"迈克尔·曾逊"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word" style="color:yellow">——该梗创造者：肖汪黑子</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-e" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"小蜗牛"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word-a" style="color:yellow">——该梗创造者：张老帅and烟雨</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-a-1" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"《指桃为苹果》"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word" style="color:yellow">——该梗创造者：老黄（黄老帅）</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-c-1" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"《著作：梗学》"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word-a" style="color:yellow">——该梗创造者：创始人爆齐，接班人肖汪黑子</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-a-1" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"《一筐有1.5个桃》"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word" style="color:yellow">——该梗创造者：肖汪黑子</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-d-1" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"虚脱了"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word-a" style="color:yellow">——该梗创造者：老班长，汤勺</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-a-2" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"我现在的心情就像林黛玉骑着电瓶车，载着猴子，在悬崖上唱好汉歌"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word-b" style="color:yellow">——该梗创造者：付xx</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-d-2" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"罚战，抄袭语文书，被死刑关进房子里"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word-a" style="color:yellow">——该梗创造者：景添（懂得都懂doge</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-a-2" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"灯冒烟了"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word-b" style="color:yellow">——该梗创造者：姚xx</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-d-3" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"黄老乡鸡"（本不想收录滴</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word-a" style="color:yellow">——该梗创造者：蛤？九班的？</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-a-2" style="float:left">
+                            <strong class="text">
+                                <a href="" style="color:yellow">"万物皆可蚊香系列"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="" class="word-b" style="color:yellow">——该梗创造者：姚xx</a>
+                            </strong><br/><br/>
+                            <div class="open-star">
+                                <strong class="p">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+
+                            <br/><br/>
+                        <br/><br/><br/><br/>
+
+                        <div class="star-more-d-3" style="float:right">
+                            <strong class="text-a">
+                                <a href="" style="color:yellow">"完了，电脑失控了"</a>
+                            </strong><br/>
+                            <strong>
+                                <a href="#" class="word-a" style="color:yellow" id="meme" onclick="ConcealText()">——该梗创造者：三个编程老六</a>
+                            </strong><br/><br/>
+                            <div class="open-star-a" style="float:right">
+                                <strong class="p-a" style="float:right">
+                                    更多
+                                </strong>
+                            </div>
+                        </div>
+                            <br/><br/>
+                                <br/><br/>
+                                    <br/><br/>
+                                        <hr>
+        </font>
+            </body>
+                </html>
+            </xmp></pre>
+            <hr/>
+            <h2 id="help">帮助</h2>
+            <pre class="vision"><xmp>
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>帮助/问题</title>
+        <style>a{text-decoration: none;}</style>
+    </head>
+    <body>
+        <h1>帮助/问题</h1>
+        <p>
+            遇到未提出或未解决的问题可以联系网站管理员
+            <br/>
+            邮箱：<strong>2398507109@qq.com</strong>(注意将邮件题目改为“<strong>6/0网站</strong>”)
+        </p>
+        <hr/>
+        <h3>1.Microsoft Edge浏览器（或Google Charm浏览器）为什么不会自动播放音乐？</h3>
+        <a href="https://jingyan.baidu.com/article/03b2f78c6f0acc1fa237aef4.html" target="_blank">常见问题，点击链接解答</a>
+        <hr/>
+        <h3>2.为什么有的人网站页面的右下角有转盘，有的人就没有？</h3>
+        <p>答：偏心吧······</p>
+        <hr/>
+        <h3>3.为什么输入留言并提交后，再刷新页面，自己的留言会重复出现？</h3>
+        <p>答：谁叫你刷新页面的？刷新页面后会重新提交表单（留言）！</p>
+        <hr/>
+        <h3>4.为什么每一次留言时都要重新输入用户名和密码，不能提前一次性登录好吗？</h3>
+        <p>答：我们没有那么高级，还不会存储数据到浏览器本地呢！（网上没有教程）</p>
+        <hr/>
+        <h3>5.为什么有的浏览器打开网站特别丑？</h3>
+        <p>答：因为页面（.html）文件是由浏览器进行解析的，不同的浏览器解析方式不同，会有误差。所以建议使用Microsoft Edge Web浏览器 或 Google Chrome浏览器（因为我们是用这个浏览器测试代码的）。</p>
+        <hr/>
+        <h3>6.为什么不同的设备打开网站区别那么大？</h3>
+        <p>答：因为前端程序员太”厉害“了。还有，极力不建议用手机打开网站，试过的都知道为什么。</p>
+        <hr/>
+        <h3>7.为什么有（好多）人的个人网站都没有信息？</h3>
+        <p>答：盗取信息是吧，你的心纯吗？（好吧，因为我们没来得及收集信息，然后就永远没来得及了。）</p>
+        <hr/>
+        <br/>
+    </body>
+</html>
+            </xmp></pre>
+            <hr/>
+            <h2 id="stalkhelp">梗网站帮助</h2>
+            <pre class="vision"><xmp>
+<!DOCTYPE html>
+        <html lang="zh-CN">
+    <head>
+            <meta charset="utf-8">
+                <title>梗网页寻求帮助</title>
+                    <link rel="stylesheet" type="text/css" href="../static/CSS/return.css">
+                        <link rel="stylesheet" type="text/css" href="../static/CSS/text.css">
+                            <link rel="stylesheet" type="text/css" href="../static/CSS/topnavHeader.css">
+        </head>
+            <body background="../static/images/picture/610梗网 x 星穹空间404 梗网页背景2.0.jpg"
+                style="background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:104.4% 105.7%;">
+            <div class="header">
+                <h1 class="linear-gradient-text"
+                    style="text-align:center;font-size:60px;">
+                    关于梗网页的一些解答！
+                </h1>
+            </div>
+                <div class="return">
+                    <strong class="return-href">
+                        <a href="610stalk.html" style="color:yellow">
+                        返回主页面
+                        </a>
+                    </strong>
+                </div><br><br><br><br>
+            <strong style="color:blue;font-size:35px;">
+                1.侧边栏打开背景音乐后一直放，咋关闭？<br>
+            </strong><br>
+                <p class="help-text">
+                    这个bug在梗网站的OSIN1.4.2版本已经修复了哦！<br>
+                    现在只需要打开侧边栏的背景音乐，点击停止播放——<br>
+                    （世界安静了！
+                </p>
+            <hr style="color:yellow"><br>
+            <strong style="color:blue;font-size:35px;">
+                2.为什么我打开梗网页后，一些内容有错位？<br>
+            </strong><br>
+                <p class="help-text">
+                    1.错位问题可能是跟浏览器有关，并非网页问题<br>
+                    目前我们测试网页的是win10及win11自带的edge浏览器（edge无问题）<br>
+                    世界之窗，360浏览器可能会有错位情况，我们还在继续优化！<br><br>
+                    2.你wifi被蹭了，网不好掉帧了（doge
+                </p>
+            <hr style="color:yellow"><br>
+            <strong style="color:blue;font-size:35px;">
+                3.老梗那部分为啥都是问号？？？
+            </strong><br>
+                <p class="help-text">
+                    问号梗是属于隐藏梗哦！<br>
+                    解锁方式的话。。只透露一点点：<br>
+                    【跟610os的剧情大大滴有关系，自行探索！】（doge
+                </p>
+            <img src="../static/images/picture/《六哥の表情，no.4》.png" width="200" height="200">
+            <hr style="color:yellow">
+            </body>
+    </html>
+            </xmp></pre>
+            <hr/>
+            <h2 id="net">留言网站</h2>
+            <pre class="vision"><xmp>
+    <!DOCTYPE html>    <!-- Leave message html version is v1.1.2 -->
+    <html lang="zh-CN">    <!-- And they all explanatory note language is English! -->
+<head>
+
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" type="text/css" href="../static/CSS/netweb.css">
+                    <script src="../static/JavaScript/Time.js"></script>
+                        <script src="../static/JavaScript/Copy.js"></script>
+                            <script src="../static/JavaScript/FormNetInput.js"></script>
+
+    </head>
+        <body>
+
+        <div class="net_header">
+            <h1 class="net_h1">
+                来自同学们的更多留言哦！
+            </h1></div>
+            <div class="net_return"><strong><a href="../" class="net_return_href">返回主页面</a></strong>
+                    </div><br/><br/>
+
+                <!-- next leave a message -->
+
+                <div class="net_people_xin" id="myDiv"><img src="../static/images/photo/涂辰心.png" class="net_img"></div>
+                    <br/><strong class="net_name_girl">涂辰心</strong><strong class="net_time_girl" id="time1">{time}</strong>
+            <div class="net_topping"><strong class="net_topping_text">置顶</strong></div>
+            <div class="net_copy"><strong><a href="#" class="net_copy_text" onclick="copyToClipboard('我们曾经在一起欣赏过美丽的花；我们曾经在一起幻想过美丽的季节。同学啊，同学，分别后不要忘了我们曾经一起走过的日子。我们有过如水的平静，有过激烈的辩论，也有过无声的竞争。我们紧靠肩头，紧握双手，拥有一个共同的理想，发出一个共同的心声。无论是得到的，还是失去的，一切都将存留在我记忆的最深处。——涂辰心')">复制</a></strong></div><br/><br/>
+            <div class="net_board"><strong class="net">
+                    我们曾经在一起欣赏过美丽的花；我们曾经在一起幻想过美丽的季节。<br/>
+                    同学啊，同学，分别后不要忘了我们曾经一起走过的日子。<br/>
+                    我们有过如水的平静，有过激烈的辩论，也有过无声的竞争。<br/>
+                    我们紧靠肩头，紧握双手，拥有一个共同的理想，发出一个共同的心声。<br/>
+                    无论是得到的，还是失去的，一切都将存留在我记忆的最深处。<br/>
+            </strong></div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+                <!-- next leave a message -->
+
+            <div class="net_people_girl-left"><img src="../static/images/photo/黄兰婷.png" class="net_img"></div>
+                <br/><strong class="net_name_girl-left">黄兰婷</strong><strong class="net_time_girl-left" id="time2">{time}</strong>
+            <div class="net_topping-left"><strong class="net_topping_text-left">置顶</strong></div>
+            <div class="net_copy-left"><strong><a href="#" class="net_copy_text" onclick="copyToClipboard('愿我们610所有人在未来生活中能开开心心，无忧无虑，有一个美好的未来，转眼白驹过隙又是一个毕业季，年少轻狂，未来不信宿命，愿我们保持自己的热爱，锦里附体，奔赴下一个烟火灿烂的山海！——黄兰婷')"
+            >复制</a></strong></div><br/><br/>
+            <div class="net_board_left-short"><strong class="net">
+                愿我们610所有人在未来生活中能开开心心，无忧无虑，有一个美好的未来，<br/>
+                转眼白驹过隙又是一个毕业季，年少轻狂，未来不信宿命，愿我们保持自己<br/>
+                的热爱，锦里附体，奔赴下一个烟火灿烂的山海！<br/>
+            </strong></div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+                <!-- next leave a message -->
+
+            <div class="net_people_boy"><img src="../static/images/photo/李卓翰.png" class="net_img"></div>
+                <br/><strong class="net_name_boy">李卓翰</strong><strong class="net_time_boy" id="time3">{time}</strong>
+            <div class="net_copy_common"><strong><a href="#" class="net_copy_text" onclick="copyToClipboard('祝610班的同学进入一个好初中，交到更多好朋友！——李卓翰')"
+            >复制</a></strong></div><br/><br/>
+            <div class="net_board_short"><strong class="net">
+                祝610班的同学进入一个好初中，交到更多好朋友！
+            </strong></div><br/><br/><br/><br/><br/><br/>
+
+                <!-- next leave a message -->
+
+            <div class="net_people_boy-left"><img src="../static/images/photo/马辰熠.png" class="net_img"></div>
+                <br/><strong class="net_name_boy-left">马辰熠</strong><strong class="net_time_boy-left" id="time4">{time}</strong>
+            <div class="net_copy_common-left"><strong><a href="#" class="net_copy_text" onclick="copyToClipboard('小学已经结束了，但我们的友谊永不结束！——马辰熠')"
+            >复制</a></strong></div><br/><br/>
+            <div class="net_board_left-shorted"><strong class="net">
+                小学已经结束了，但我们的友谊永不结束！
+            </strong></div><br/><br/><br/><br/><br/>
+
+                <!-- next leave a message -->
+
+            <div class="net_people_girl" id="myDiv"><img src="../static/images/photo/邓欣宇.png" class="net_img"></div>
+                    <br/><strong class="net_name_girl">邓欣宇</strong><strong class="net_time_girl" id="time5">{time}</strong>
+            <div class="net_copy_common"><strong><a href="#" class="net_copy_text" onclick="copyToClipboard('希望610越来越好，莫愁前路无知己，天下谁人不识君！——邓欣宇')"
+            >复制</a></strong></div><br/><br/>
+            <div class="net_board_varshort"><strong class="net">
+                希望610越来越好，莫愁前路无知己，天下谁人不识君！
+            </strong></div><br/><br/><br/><br/><br/>
+
+                <!-- next leave a message -->
+
+            <div class="net_people_girl-left"><img src="../static/images/photo/张雅涵.png" class="net_img"></div>
+            <br/><strong class="net_name_girl-left">张雅涵</strong><strong class="net_time_girl-left" id="time6">{time}</strong>
+            <div class="net_copy_common-left"><strong><a href="#" class="net_copy_text" onclick="copyToClipboard('希望班里的每个人都能走向幸福的未来，长大以后，愿大家能再回到鲁小，共同回忆我们这六年来的时光！——张雅涵')"
+            >复制</a></strong></div><br/><br/>
+            <div class="net_board_left-varshort"><strong class="net">
+                希望班里的每个人都能走向幸福的未来，长大以后，愿大家能再回到鲁小，<br/>
+                共同回忆我们这六年来的时光！
+            </strong></div><br/><br/><br/><br/><br/><br/><br/>
+
+                <!-- next leave a message -->
+
+            <div class="net_people_girl-left"><img src="../static/images/picture/header.jpg" class="net_img"></div>
+            <br/><strong class="net_name_girl-left">汪子涵</strong><strong class="net_time_girl-left" id="time7">{time}</strong>
+            <div class="net_copy_common-left"><strong><a href="#" class="net_copy_text" onclick="copyToClipboard('梦有多燃，就能飞得多远。 ——汪子涵')"
+            >复制</a></strong></div><br/><br/>
+            <div class="net_board_left_endshort"><strong class="net">
+                梦有多燃，就能飞得多远。
+            </strong></div><br/><br/><br/><br/><br/><br/>
+
+                <!-- next leave a message -->
+
+            <div class="net_people_boy"><img src="../static/images/photo/张宸硕.png" class="net_img"></div>
+                <br/><strong class="net_name_boy">小萝莉</strong><strong class="net_time_boy" id="time8">{time}</strong>
+            <div class="net_copy_common"><strong><a href="#" class="net_copy_text" onclick="copyToClipboard('加油吧！——小萝莉')"
+            >复制</a></strong></div><br/><br/>
+            <div class="net_board_overshort"><strong class="net">
+                加油吧！
+            </strong></div><br/><br/><br/><br/><br/><br/>
+
+                <!-- next leave a message -->
+
+            <div id="net_conceal_qi">
+            <div class="net_people_qi"><img src="../static/images/photo/蒋俊峰.png" class="net_img"></div></div>
+                <br/><strong class="net_name_boy">爆齐</strong><strong class="net_time_boy_short" id="time9">{time}</strong>
+            <div class="net_copy_short"><strong><a href="#" class="net_copy_text" onclick="copyToClipboard('友谊永不凋零，就像鸠和基诺那样的关系，送给大家一句phigros第八章记载的名言吧：旅船只是遮盖未来的影像，人生正指引着我们的命运，硬币掷出之后，正逆的交换从未停止，前方是光明亦是堕落，加油啊！ikun们！——爆齐')"
+            >复制</a></strong></div><br/><br/>
+            <div class="net_board_varlong"><strong class="net">
+                友谊永不凋零，就像鸠和基诺那样的关系，送给大家一句<br/>
+                phigros第八章记载的名言吧：旅船只是遮盖未来的影<br/>
+                像，人生正指引着我们的命运，硬币掷出之后，正逆的交<br/>
+                换从未停止，前方是光明亦是堕落，加油啊！ikun们！<br/>
+            </strong></div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><hr class="net_hr">
+
+                <!-- Dynamic messages -->
+
+                        {{message}}
+
+                        <hr class="net_hr">
+
+                <!-- leave message over, and this a new leave message block! -->
+
+            <h2 class="net_h2">
+                来自你的珍贵留言哦！
+            </h2>
+            <div class="net_other"><strong class="net">610留言...</strong>
+            <strong class="net_opacity">610天天快乐！——XXX</strong></div><br/><br/><br/><br/><br/>
+            <div class="net_other_left"><strong class="net" style="position:absolute;right:20px;">610留言...</strong>
+            <strong class="net_opacity_left">610友谊不散！——XXX</strong></div><br/><br/><br/><br/><br/><br/>
+
+        <div class="net_div_big">
+
+            <form action="" name="net" method="post" name="action" value="net" id="myForm">
+                <strong class="net_font">姓名</strong><br/><br/><br/><br/>
+                <input name="sayer" class="net_div_font" type="text" id="inputField" placeholder="your name"><br/><br/><br/>
+
+                <strong class="net_font">留言密码</strong><br/><br/><br/><br/>
+                <input name="password" class="net_div_font" type="password" id="password" placeholder="your password"><br/><br/><br/>
+
+                <strong class="net_font">留言信息</strong><br/><br/><br/><br/>
+                <input name="say" class="net_div_font" type="text" id="myInput" placeholder="you want to say ......"><br/><br/><br/>
+
+                <strong class="net_font">头像背景</strong><br/><br/><br/><br/><br/><div class="net_package">
+                <input class="net_radio" type="radio" name="color" value="default"><strong class="net_span">默认男女颜色</strong>
+                <input class="net_radio" type="radio" name="color" value="net_people_peach"><strong class="net_span_peach">成熟桃子</strong>
+                <input class="net_radio_over" type="radio" name="color" value="net_people_pure-red"><strong class="net_span_pure-red">纯红色</strong>
+                <input class="net_radio_over" type="radio" name="color" value="net_people_pure-purple"><strong class="net_span_pure-purple">纯紫色</strong><br/><br/>
+                <input class="net_radio" type="radio" name="color" value="net_people_sky"><strong class="net_span_sky">湛蓝之空</strong>
+                <input class="net_radio" type="radio" name="color" value="net_people_pink" style="margin-left:80px;"><strong class="net_span_pink">心上之粉</strong>
+                <input class="net_radio_over" type="radio" name="color" value="net_people_pure-blue"><strong class="net_span_pure-blue">纯蓝色</strong>
+                <input class="net_radio_over" type="radio" name="color" value="net_people_pure-green"><strong class="net_span_pure-green">纯绿色</strong><br/><br/>
+                <input class="net_radio" type="radio" name="color" value="net_people_crystal"><strong class="net_span_crystal">时空水晶</strong>
+                <input class="net_radio" type="radio" name="color" value="net_people_purple" style="margin-left:80px;"><strong class="net_span_purple">纯紫水晶</strong>
+                <input class="net_radio_over" type="radio" name="color" value="net_people_pure-orange"><strong class="net_span_pure-orange">纯橘色</strong><br/><br/>
+                <input class="net_radio" type="radio" name="color" value="net_people_neon"><strong class="net_span_neon">霓虹街道</strong>
+                <input class="net_radio" type="radio" name="color" value="net_people_spring" style="margin-left:80px;"><strong class="net_span_spring">春日景色</strong>
+                <input class="net_radio_over" type="radio" name="color" value="net_people_pink"><strong class="net_span_pure-pink">纯粉色</strong><br/><br/>
+                <input class="net_radio" type="radio" name="color" value="net_people_ocean"><strong class="net_span_ocean">海洋之心</strong>
+                <input class="net_radio" type="radio" name="color" value="dream" style="margin-left:80px;"><strong class="net_span_dream">冰封之梦</strong>
+                <input class="net_radio_over" type="radio" name="color" value="net_people_pure-cyan"><strong class="net_span_pure-cyan">纯青色</strong><br/><br/>
+                </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+                <strong class="net_font">留言头像</strong><br/><br/><br/><br/><br/><div class="net_package_short">
+                <input class="net_radio" type="radio" name="head-sculpture" value="default"><strong class="net_span">默认学生头像</strong><br/><br/>
+                <input class="net_radio" type="radio" name="head-sculpture" value="anonymous"><strong class="net_span">匿名头像</strong>
+
+                <button name="action" class="net_btm" type="submit" value="sending" id="input" style="position:absolute; left:900px;">send</button>
+                <br/><br/>
+            </form>
+            </div><br/><br/><br/><br/><br/>
+                <p class="net_watermark">网站及后端由610开发!</p><br/><br/><br/><br/><br/><br/>
+
+        </body>
+</html>
+            </xmp></pre>
+            <hr/>
+            <h2 id="EmployeeTable">网站员工表</h2>
+            <pre class="vision"><xmp>
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>网站员工编程信息</title>
+        <style>a{text-decoration: none;}</style>
+    </head>
+    <body>
+        <p>网站分工</p><ul>
+            <li>后端</li><ul>
+                <li><a href="./47段禹珩">线段</a></li>
+            </ul>
+            <li>前端</li><ul>
+                <li>主页面</li><ul>
+                    <li>框架</li><ul>
+                        <li><a href="./47段禹珩">线段</a></li>
+                    </ul><li>美化</li><ul>
+                        <li><a href="./40张轩诚">张轩诚</a></li>
+                        <li><a href="./03蒋俊峰">爆齐</a></li>
+                    </ul>
+                </ul><li>个人页面</li><ul>
+                    <li><a href="./47段禹珩">线段</a></li>
+                    </ul><li>梗网站</li><ul>
+                        <li><a href="./03蒋俊峰">爆齐</a></li>
+                    </ul><li>日志</li><ul>
+                        <li><a href="./47段禹珩">线段</a></li>
+                    </ul><li>帮助</li><ul>
+                        <li><a href="./47段禹珩">线段</a></li>
+                    </ul>
+                </ul>
+            </ul>
+        </ul>
+    </body>
+</html>
+            </xmp></pre>
+            <hr/>
+            <h2 id="log">日志页面</h2>
+            <pre class="vision"><xmp>
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>后端运行日志</title>
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="True hidden">
+            <ul>
+                <li><p>XXX被光临了：有人访问了XXX的个人网站</p></li>
+                <li><p>XXX被爱了：有人给XXX点了赞</p></li>
+                <li><p>XXX被问候了：有人给XXX留了言</p></li>
+                <li><p>XXX被陌生人问候了：有人给XXX留了言，但是输错了密码</p></li>
+                <li><p>XXX差点被吐槽了：有人给XXX留言，但是里面包含敏感词（可能会有误判）</p></li>
+            </ul>
+        </div>
+
+        <div class="False">
+            <p>
+                {{log}}
+            </p>
+        </div>
+
+        <script>
+            var div1 = document.querySelector('.False');
+            var div2 = document.querySelector('.True');
+        
+            function toggleDiv() {
+                if (div1.classList.contains('hidden')) {
+                    div1.classList.remove('hidden');
+                    div2.classList.add('hidden');
+                } else {
+                    div1.classList.add('hidden');
+                    div2.classList.remove('hidden');
+                }
+            }
+        
+            document.addEventListener('click', toggleDiv);
+          </script>
+    </body>
+</html>
+            </xmp></pre>
+            <hr/>
+            <h2 id="r404">路径（文件）报错页面</h2>
+            <pre class="vision"><xmp>
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>404——页面走丢啦！</title>
+        <style>a{text-decoration: none;}</style>
+    </head>
+    <body>
+        <h1>404：未找到页面！</h1>
+        <p>你是不是输入了错误的链接？别粗心大意！</p>
+    </body>
+</html>            
+            </xmp></pre>
+            <hr/>
+            <h2 id="r500">服务器报错页面</h2>
+            <pre class="vision"><xmp>
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>500——内部错误</title>
+        <style>a{text-decoration: none;}</style>
+    </head>
+    <body>
+        <h1>:( 500：发生了内部错误</h1>
+        <p>不要慌张，这不怪你，不是你的问题，请联系管理员。</p>
+    </body>
+</html>
+            </xmp></pre>
+            <h2 id="web-keep-alive">网站保活查看</h2>
+            <pre class="vision"><xmp>
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>web-keep-alive:{{now}}</title>
+        <meta http-equiv="refresh" content="0">
+    </head>
+    <body>
+        <p>web-keep-alive</p> <hr/>
+        <p>sustain, </p>
+        <p>loading...</p> <br/>
+        <p>Server time: {{now}}</p> <br/>
+    </body>
+</html>
+            </xmp></pre>
+        </div>
+        <div id="root">
+            <h1>后端</h1>
+            <h2 id="main">main.py</h2>
+            <pre class="root"><xmp>
+# !/usr/bin/python3
+# -*- coding : utf-8 -*-
+# coding: utf-8
+from library import *
+from operation import _space_, _net_, _log_
+
+app = Flask(__name__)
+# app.config['SERVER_NAME'] = 'memory610'
+# ip = '0.0.0.0'
+# hostname = socket.gethostbyaddr(ip)[0]
+
+
+'''主要页面'''
+@app.route('/', methods=["GET", "POST"])
+def main ():
+    return render_template('mainpage.html')
+
+@app.route('/help', methods=["GET", "POST"])
+def help_doubt ():
+    return render_template('help.html')
+
+@app.route('/610stalk', methods=["GET", "POST"])
+def stalk ():
+    return render_template('610stalk.html')
+
+@app.route('/stalhelp', methods=["GET", "POST"])
+def stalk_help ():
+    return render_template('stalhelp.html')
+
+@app.route('/WET', methods=["GET", "POST"])
+def WebsitexEmployeeTable ():
+    return render_template('EmployeeTable.html')
+
+@app.route('/net', methods=["GET", "POST"])
+def net ():
+    return _net_()
+
+
+'''隐藏页面'''
+@app.route('/610/', methods=["GET", "POTS"])
+def source1 ():
+    return render_template('source.html')
+
+@app.route('/610/log', methods=["GET", "POST"])
+def log ():
+    return _log_()
+
+@app.route('/610/<all>', methods=["GET", "POTS"])
+def source2 (all):
+    return render_template('source.html')
+
+
+'''个人网站'''
+@app.route('/<space>', methods=["GET", "POST"])
+def space (space):
+    return _space_(space=space)
+
+
+'''报错页面'''
+@app.errorhandler(404)
+def show_404_page(no):
+    return render_template('r404.html'), 404
+
+@app.errorhandler(500)
+def show_500_page(no):
+    return render_template('r500.html'), 500
+
+
+'''运行程序'''
+if __name__ == "__main__":
+    app.config["JSON_AS_ASCII"] = True
+    app.run(host="0.0.0.0", port=800, debug=True, threaded=True, processes=1)
+    # app.run(debug=True, ssl_context=())
+
+    # server = pywsgi.WSGIServer(('0.0.0.0', 80), app)
+    # server.serve_forever()
+            </xmp></pre>
+            <hr/>
+            <h2 id="operation">operation.py</h2>
+            <pre class="root"><xmp>
+# !/usr/bin/python3
+# -*- coding : utf-8 -*-
+# coding: utf-8
+'''该服务器技术人员：段禹珩'''
+from library import *
+import data
+logininformation = data.get_logininformation()
+information = data.personalinformation()
+bad = data._bad_()
+
+
+'''日志函数'''
+def Clog (content):
+    content = str(content)
+    current = str(datetime.now())
+
+    file = open(r'./data/log.txt', 'a', encoding='utf-8', errors="ignore", newline='\r\n')
+    file.write(current + "  ——||——>  <strong>" + content + "</strong><br/>" + '\n')
+    file.close()
+
+
+'''判断610成员'''
+def member (name, password):
+    if name in logininformation.keys() and logininformation[name] == password:
+        return True
+    else:
+        return False
+
+
+'''判断敏感词函数'''
+def verify (words):
+    if profanity.contains_profanity(words):
+        return False
+    else:
+        for i, value in enumerate(bad):
+            if value in words:
+                return False
+        return True
+
+
+'''后端运算'''
+def _space_ (space):
+    def space_main (name):
+        sign = name + "："
+        action = request.form.get('action')
+        f_name = request.form.get('name')
+        f_password = request.form.get('password')
+
+        good_route = r"./data/space/good/" + name + ".txt"
+        comment_route = r"./data/space/comment/" + name + ".txt"
+        encoding = 'utf-8'
+        readwrite_data_good = open(good_route, "r+", encoding=encoding, errors="ignore")
+        readwrite_data_comment = open(comment_route, "r+", encoding=encoding, errors="ignore")
+
+        good_data = int(readwrite_data_good.read())
+        comment_data = str(readwrite_data_comment.read())
+
+        def ret ():
+            nonlocal good_data, comment_data
+
+            def handle(price, way, info):
+                if price == None:
+                    if way == 0 or way == 1 or way == 3:
+                        return ''
+                    if way == 2:
+                        return info
+                else:
+                    if way == 0:
+                        return '<p>' + info + '：<strong>' + price + '</strong></p>'
+                    if way == 1:
+                        return '<p>' + info + '：<strong><a class="consultingService" href="tencent://message/?uin=' + price + '&Site=Sambow&Menu=info">' + price + '</a></strong></p>'
+                    if way == 2 or way == 3:
+                        return price
+
+            return render_template("space.html",
+                name=Markup(information[name]['name']),
+                id=Markup(information[name]['id']),
+                leave=Markup(handle(information[name]['leave'], 0, "留给610的话")),
+                birthday=Markup(handle(information[name]['birthday'], 0, "生日")),
+                constellation=Markup(handle(information[name]['constellation'], 0, "星座")),
+                hobby=Markup(handle(information[name]['hobby'], 0, "爱好")),
+                motto=Markup(handle(information[name]['motto'], 0, "座右铭")),
+                goodfriend=Markup(handle(information[name]['goodfriend'], 0, "好朋友")),
+                QQnumber=Markup(handle(information[name]['QQnumber'], 1, "QQ")),
+                background=Markup(information[name]['background']),
+                typeface=Markup(handle(information[name]['typeface'], 2, 'STSong')),
+                music=Markup(information[name]['music']),
+                specialeffects=Markup(handle(information[name]['specialeffects'], 3, "")),
+                good=Markup(good_data),
+                comment=Markup(comment_data)
+            )
+
+        if action == 'good_p':
+            good_data += 1
+
+            readwrite_data_good.seek(0)
+            readwrite_data_good.truncate()
+            readwrite_data_good.write(str(good_data))
+            readwrite_data_good.close()
+
+            Clog(sign + "被爱了")
+            return ret()
+
+        if action == 'sending':
+            if member(f_name, f_password):
+                comment_comment = request.form['comment']
+                if verify(comment_comment):
+                    comment_name = f_name
+                    comment_time = strftime("%Y") + "年" + strftime("%m") + "月" + strftime("%d") + "日" + strftime("%H") + "时" + strftime("%M") + "分" + strftime("%S") + "秒"
+                    comment_data += "<p><strong>" + comment_name + "：</strong>" + comment_comment + "<br><font size='3'>" + comment_time + "</font></p>" + "<hr>" + '\n'
+
+                    readwrite_data_comment.seek(0)
+                    readwrite_data_comment.truncate()
+                    readwrite_data_comment.write(comment_data)
+                    readwrite_data_comment.close()
+
+                    Clog(sign + "被问候了")
+                    return ret()
+                else:
+                    Clog(sign + "差点被吐槽了")
+                    return ret()
+            else:
+                Clog(sign + "被陌生人问候了")
+                return ret()
+        else:
+            Clog(sign + "被光临了")
+            return ret()
+
+    if space in information.keys():
+        return space_main(space)
+    else:
+        return render_template('r404.html')
+
+def _net_ ():
+    action = str(request.form.get('action'))
+    name = str(request.form.get('sayer'))
+    password = str(request.form.get('password'))
+    comment = str(request.form.get('say'))
+    color = str(request.form.get('color'))
+
+    content = open(r'./data/MessageContent.txt', "r+", encoding='utf-8', errors="ignore")
+
+    contents = str(content.read())
+
+    def ret ():
+        nonlocal contents
+        return render_template('net.html', message=Markup(str(contents)))
+
+    if action == 'sending':
+        if member(name, password) and verify(comment):
+            TIME = "发送时间" + strftime("%x") + " " + strftime("%X")
+            located = choice([True, False])
+            if located:
+                located_image = "net_people_boy"
+                located_name = "net_name_boy"
+                located_time = "net_time_boy"
+                located_coby = "net_copy_common"
+                located_main = "net_board_overshort-automatic"
+            else:
+                located_image = "net_people_boy-left"
+                located_name = "net_name_boy-left"
+                located_time = "net_time_boy-left"
+                located_coby = "net_copy_common-left"
+                located_main = "net_board_left-shorted-automatic"
+
+            n, width, height, br = wcswidth(comment), 52, 80, 6
+            if n < 64:
+                for i in range(n, 0, -2):
+                    height = 75
+                    width += 32
+            while True:
+                if n >= 64:
+                    height += 30
+                    width = 920
+                    br += 1
+                    n -= 64
+                else:
+                    break
+
+            if color == None:
+                color = "net_img"
+
+            part = '''
+                <div class=" ''' + str(located_image) + ''' ">
+                    <img src="../static/images/photo/''' + str(name) + '''.png" class=" ''' + str(color) + ''' net_img">
+                </div>
+                <br/>
+                <strong class=" ''' + str(located_name) + ''' ">''' + str(name) + '''</strong>
+                <strong class=" ''' + str(located_time) + ''' ">''' + str(TIME) + '''</strong>
+                <div class="''' + str(located_coby) + '''">
+                    <strong>
+                        <a href="#" class="net_copy_text" onclick="copyToClipboard(' ''' + str(comment) + ''' —— ''' + str(name) + ''' ')">复制</a>
+                    </strong>
+                </div>
+                <br/> <br/>
+                <div class=" ''' + str(located_main) + ''' " style="width: ''' + str(width) + '''px; height: ''' + str(height) + '''px;">
+                    <strong class="net-automatic">
+                        ''' + str(comment) + '''
+                    </strong>
+                </div>
+                ''' + str(int(br) * '<br/> ') + '''
+            '''
+            contents += str(part)
+
+            content.seek(0)
+            content.truncate()
+            content.write(str(contents))
+            content.close()
+
+            return ret()
+
+    return ret()
+
+def _log_ ():
+    return render_template('log.html',log=Markup(str(open(r'./data/log.txt', "r+", encoding='utf-8', errors="ignore").read())))
+            </xmp></pre>
+            <hr/>
+            <h2 id="data">data.py</h2>
+            <pre class="root"><xmp>
+# !/usr/bin/python3
+# -*- coding : utf-8 -*-
+# coding: utf-8
+from library import *
+
+
+def _bad_ ():
+    return []
+
+
+def get_logininformation ():
+    return {}
+
+
+def personalinformation ():
+    senior = '''
+        <div class="svg-frame">
+            <svg style="--i:0;--j:0;">
+                <g id="out1">
+                    <path d="M72 172C72 116.772 116.772 72 172 72C227.228 72 272 116.772 272 172C272 227.228 227.228 272 172 272C116.772 272 72 227.228 72 172ZM197.322 172C197.322 158.015 185.985 146.678 172 146.678C158.015 146.678 146.678 158.015 146.678 172C146.678 185.985 158.015 197.322 172 197.322C185.985 197.322 197.322 185.985 197.322 172Z"></path>
+                    <path mask="url(#path-1-inside-1_111_3212)" stroke-miterlimit="16" stroke-width="2" stroke="#00FFFF" d="M72 172C72 116.772 116.772 72 172 72C227.228 72 272 116.772 272 172C272 227.228 227.228 272 172 272C116.772 272 72 227.228 72 172ZM197.322 172C197.322 158.015 185.985 146.678 172 146.678C158.015 146.678 146.678 158.015 146.678 172C146.678 185.985 158.015 197.322 172 197.322C185.985 197.322 197.322 185.985 197.322 172Z"></path>
+                </g>
+            </svg>
+            <svg style="--i:1;--j:1;">
+                <g id="out2">
+                    <mask fill="white" id="path-2-inside-2_111_3212">
+                        <path d="M102.892 127.966C93.3733 142.905 88.9517 160.527 90.2897 178.19L94.3752 177.88C93.1041 161.1 97.3046 144.36 106.347 130.168L102.892 127.966Z"></path>
+                        <path d="M93.3401 194.968C98.3049 211.971 108.646 226.908 122.814 237.541L125.273 234.264C111.814 224.163 101.99 209.973 97.2731 193.819L93.3401 194.968Z"></path>
+                        <path d="M152.707 92.3592C140.33 95.3575 128.822 101.199 119.097 109.421L121.742 112.55C130.981 104.739 141.914 99.1897 153.672 96.3413L152.707 92.3592Z"></path>
+                        <path d="M253.294 161.699C255.099 175.937 253.132 190.4 247.59 203.639L243.811 202.057C249.075 189.48 250.944 175.74 249.23 162.214L253.294 161.699Z"></path>
+                        <path d="M172 90.0557C184.677 90.0557 197.18 92.9967 208.528 98.6474C219.875 104.298 229.757 112.505 237.396 122.621L234.126 125.09C226.869 115.479 217.481 107.683 206.701 102.315C195.921 96.9469 184.043 94.1529 172 94.1529V90.0557Z"></path>
+                        <path d="M244.195 133.235C246.991 138.442 249.216 143.937 250.83 149.623L246.888 150.742C245.355 145.34 243.242 140.12 240.586 135.174L244.195 133.235Z"></path>
+                        <path d="M234.238 225.304C223.932 237.338 210.358 246.126 195.159 250.604C179.961 255.082 163.79 255.058 148.606 250.534L149.775 246.607C164.201 250.905 179.563 250.928 194.001 246.674C208.44 242.42 221.335 234.071 231.126 222.639L234.238 225.304Z"></path>
+                    </mask>
+                    <path mask="url(#path-2-inside-2_111_3212)" fill="#00FFFF" d="M102.892 127.966L105.579 123.75L101.362 121.063L98.6752 125.28L102.892 127.966ZM90.2897 178.19L85.304 178.567L85.6817 183.553L90.6674 183.175L90.2897 178.19ZM94.3752 177.88L94.7529 182.866L99.7386 182.488L99.3609 177.503L94.3752 177.88ZM106.347 130.168L110.564 132.855L113.251 128.638L109.034 125.951L106.347 130.168ZM93.3401 194.968L91.9387 190.168L87.1391 191.569L88.5405 196.369L93.3401 194.968ZM122.814 237.541L119.813 241.54L123.812 244.541L126.813 240.542L122.814 237.541ZM125.273 234.264L129.272 237.265L132.273 233.266L128.274 230.265L125.273 234.264ZM97.2731 193.819L102.073 192.418L100.671 187.618L95.8717 189.02L97.2731 193.819ZM152.707 92.3592L157.567 91.182L156.389 86.3226L151.53 87.4998L152.707 92.3592ZM119.097 109.421L115.869 105.603L112.05 108.831L115.278 112.649L119.097 109.421ZM121.742 112.55L117.924 115.778L121.152 119.596L124.97 116.368L121.742 112.55ZM153.672 96.3413L154.849 101.201L159.708 100.023L158.531 95.1641L153.672 96.3413ZM253.294 161.699L258.255 161.07L257.626 156.11L252.666 156.738L253.294 161.699ZM247.59 203.639L245.66 208.251L250.272 210.182L252.203 205.569L247.59 203.639ZM243.811 202.057L239.198 200.126L237.268 204.739L241.88 206.669L243.811 202.057ZM249.23 162.214L248.601 157.253L243.641 157.882L244.269 162.842L249.23 162.214ZM172 90.0557V85.0557H167V90.0557H172ZM208.528 98.6474L206.299 103.123L206.299 103.123L208.528 98.6474ZM237.396 122.621L240.409 126.611L244.399 123.598L241.386 119.608L237.396 122.621ZM234.126 125.09L230.136 128.103L233.149 132.093L237.139 129.08L234.126 125.09ZM206.701 102.315L204.473 106.791L204.473 106.791L206.701 102.315ZM172 94.1529H167V99.1529H172V94.1529ZM244.195 133.235L248.601 130.87L246.235 126.465L241.83 128.83L244.195 133.235ZM250.83 149.623L252.195 154.433L257.005 153.067L255.64 148.257L250.83 149.623ZM246.888 150.742L242.078 152.107L243.444 156.917L248.254 155.552L246.888 150.742ZM240.586 135.174L238.22 130.768L233.815 133.134L236.181 137.539L240.586 135.174ZM234.238 225.304L238.036 228.556L241.288 224.759L237.491 221.506L234.238 225.304ZM195.159 250.604L196.572 255.4L196.572 255.4L195.159 250.604ZM148.606 250.534L143.814 249.107L142.386 253.899L147.178 255.326L148.606 250.534ZM149.775 246.607L151.203 241.816L146.411 240.388L144.983 245.18L149.775 246.607ZM194.001 246.674L195.415 251.47L195.415 251.47L194.001 246.674ZM231.126 222.639L234.379 218.841L230.581 215.589L227.329 219.386L231.126 222.639ZM98.6752 125.28C88.5757 141.13 83.8844 159.826 85.304 178.567L95.2754 177.812C94.0191 161.227 98.1709 144.681 107.109 130.653L98.6752 125.28ZM90.6674 183.175L94.7529 182.866L93.9976 172.895L89.912 173.204L90.6674 183.175ZM99.3609 177.503C98.1715 161.8 102.102 146.135 110.564 132.855L102.131 127.481C92.5071 142.585 88.0368 160.4 89.3895 178.258L99.3609 177.503ZM109.034 125.951L105.579 123.75L100.205 132.183L103.661 134.385L109.034 125.951ZM88.5405 196.369C93.8083 214.41 104.78 230.259 119.813 241.54L125.815 233.542C112.512 223.558 102.802 209.532 98.1397 193.566L88.5405 196.369ZM126.813 240.542L129.272 237.265L121.274 231.263L118.815 234.54L126.813 240.542ZM128.274 230.265C115.679 220.813 106.486 207.534 102.073 192.418L92.4735 195.221C97.493 212.412 107.948 227.513 122.272 238.263L128.274 230.265ZM95.8717 189.02L91.9387 190.168L94.7415 199.767L98.6745 198.619L95.8717 189.02ZM151.53 87.4998C138.398 90.681 126.188 96.8793 115.869 105.603L122.325 113.239C131.457 105.519 142.262 100.034 153.884 97.2187L151.53 87.4998ZM115.278 112.649L117.924 115.778L125.56 109.322L122.915 106.193L115.278 112.649ZM124.97 116.368C133.616 109.059 143.846 103.866 154.849 101.201L152.495 91.4818C139.981 94.5132 128.347 100.419 118.514 108.732L124.97 116.368ZM158.531 95.1641L157.567 91.182L147.848 93.5364L148.812 97.5185L158.531 95.1641ZM248.334 162.327C250.028 175.697 248.181 189.277 242.978 201.708L252.203 205.569C258.082 191.522 260.169 176.177 258.255 161.07L248.334 162.327ZM249.521 199.027L245.741 197.445L241.88 206.669L245.66 208.251L249.521 199.027ZM248.423 203.987C254.025 190.602 256.014 175.98 254.19 161.585L244.269 162.842C245.873 175.5 244.125 188.357 239.198 200.126L248.423 203.987ZM249.858 167.174L253.923 166.659L252.666 156.738L248.601 157.253L249.858 167.174ZM172 95.0557C183.903 95.0557 195.644 97.8172 206.299 103.123L210.757 94.1717C198.717 88.1761 185.45 85.0557 172 85.0557V95.0557ZM206.299 103.123C216.954 108.429 226.233 116.135 233.406 125.634L241.386 119.608C233.281 108.874 222.796 100.167 210.757 94.1717L206.299 103.123ZM234.383 118.631L231.113 121.1L237.139 129.08L240.409 126.611L234.383 118.631ZM238.116 122.077C230.393 111.849 220.403 103.552 208.93 97.8393L204.473 106.791C214.56 111.814 223.345 119.11 230.136 128.103L238.116 122.077ZM208.93 97.8393C197.458 92.1263 184.816 89.1529 172 89.1529V99.1529C183.269 99.1529 194.385 101.767 204.473 106.791L208.93 97.8393ZM177 94.1529V90.0557H167V94.1529H177ZM239.79 135.601C242.416 140.49 244.504 145.649 246.02 150.988L255.64 148.257C253.927 142.225 251.567 136.395 248.601 130.87L239.79 135.601ZM249.464 144.813L245.523 145.932L248.254 155.552L252.195 154.433L249.464 144.813ZM251.698 149.376C250.067 143.628 247.818 138.073 244.991 132.808L236.181 137.539C238.666 142.168 240.644 147.052 242.078 152.107L251.698 149.376ZM242.951 139.579L246.561 137.64L241.83 128.83L238.22 130.768L242.951 139.579ZM230.441 222.051C220.763 233.351 208.017 241.603 193.746 245.808L196.572 255.4C212.698 250.649 227.101 241.325 238.036 228.556L230.441 222.051ZM193.746 245.808C179.475 250.012 164.291 249.99 150.033 245.742L147.178 255.326C163.289 260.125 180.447 260.151 196.572 255.4L193.746 245.808ZM153.397 251.962L154.567 248.035L144.983 245.18L143.814 249.107L153.397 251.962ZM148.348 251.399C163.7 255.973 180.049 255.997 195.415 251.47L192.588 241.877C179.077 245.858 164.702 245.837 151.203 241.816L148.348 251.399ZM195.415 251.47C210.78 246.942 224.504 238.058 234.924 225.891L227.329 219.386C218.167 230.084 206.099 237.897 192.588 241.877L195.415 251.47ZM227.874 226.436L230.986 229.101L237.491 221.506L234.379 218.841L227.874 226.436Z"></path>
+                </g>
+            </svg>
+            <svg style="--i:0;--j:2;">
+                <g id="inner3">
+                    <path d="M195.136 135.689C188.115 131.215 179.948 128.873 171.624 128.946C163.299 129.019 155.174 131.503 148.232 136.099L148.42 136.382C155.307 131.823 163.368 129.358 171.627 129.286C179.886 129.213 187.988 131.537 194.954 135.975L195.136 135.689Z"></path>
+                    <path d="M195.136 208.311C188.115 212.784 179.948 215.127 171.624 215.054C163.299 214.981 155.174 212.496 148.232 207.901L148.42 207.618C155.307 212.177 163.368 214.642 171.627 214.714C179.886 214.786 187.988 212.463 194.954 208.025L195.136 208.311Z"></path>
+                    <path mask="url(#path-5-inside-3_111_3212)" fill="#00FFFF" d="M195.136 135.689L195.474 135.904L195.689 135.566L195.351 135.352L195.136 135.689ZM171.624 128.946L171.627 129.346L171.624 128.946ZM148.232 136.099L148.011 135.765L147.678 135.986L147.899 136.32L148.232 136.099ZM148.42 136.382L148.086 136.603L148.307 136.936L148.641 136.716L148.42 136.382ZM171.627 129.286L171.63 129.686L171.627 129.286ZM194.954 135.975L194.739 136.313L195.076 136.528L195.291 136.19L194.954 135.975ZM195.136 208.311L195.351 208.648L195.689 208.433L195.474 208.096L195.136 208.311ZM171.624 215.054L171.627 214.654L171.624 215.054ZM148.232 207.901L147.899 207.68L147.678 208.014L148.011 208.234L148.232 207.901ZM148.42 207.618L148.641 207.284L148.307 207.063L148.086 207.397L148.42 207.618ZM171.627 214.714L171.63 214.314L171.627 214.714ZM194.954 208.025L195.291 207.81L195.076 207.472L194.739 207.687L194.954 208.025ZM195.351 135.352C188.265 130.836 180.022 128.473 171.62 128.546L171.627 129.346C179.874 129.274 187.966 131.594 194.921 136.026L195.351 135.352ZM171.62 128.546C163.218 128.619 155.018 131.127 148.011 135.765L148.453 136.432C155.33 131.88 163.38 129.418 171.627 129.346L171.62 128.546ZM147.899 136.32L148.086 136.603L148.753 136.161L148.566 135.878L147.899 136.32ZM148.641 136.716C155.463 132.199 163.448 129.757 171.63 129.686L171.623 128.886C163.287 128.958 155.15 131.447 148.199 136.049L148.641 136.716ZM171.63 129.686C179.812 129.614 187.839 131.916 194.739 136.313L195.169 135.638C188.138 131.158 179.959 128.813 171.623 128.886L171.63 129.686ZM195.291 136.19L195.474 135.904L194.799 135.474L194.617 135.76L195.291 136.19ZM194.921 207.974C187.966 212.406 179.874 214.726 171.627 214.654L171.62 215.454C180.022 215.527 188.265 213.163 195.351 208.648L194.921 207.974ZM171.627 214.654C163.38 214.582 155.33 212.12 148.453 207.567L148.011 208.234C155.018 212.873 163.218 215.38 171.62 215.454L171.627 214.654ZM148.566 208.122L148.753 207.838L148.086 207.397L147.899 207.68L148.566 208.122ZM148.199 207.951C155.15 212.553 163.287 215.041 171.623 215.114L171.63 214.314C163.448 214.243 155.463 211.801 148.641 207.284L148.199 207.951ZM171.623 215.114C179.959 215.187 188.138 212.842 195.169 208.362L194.739 207.687C187.839 212.084 179.812 214.386 171.63 214.314L171.623 215.114ZM194.617 208.239L194.799 208.526L195.474 208.096L195.291 207.81L194.617 208.239Z"></path>
+                </g>
+                <path stroke="#00FFFF" d="M240.944 172C240.944 187.951 235.414 203.408 225.295 215.738C215.176 228.068 201.095 236.508 185.45 239.62C169.806 242.732 153.567 240.323 139.5 232.804C125.433 225.285 114.408 213.12 108.304 198.384C102.2 183.648 101.394 167.25 106.024 151.987C110.654 136.723 120.434 123.537 133.696 114.675C146.959 105.813 162.884 101.824 178.758 103.388C194.632 104.951 209.472 111.97 220.751 123.249" id="out3"></path>
+            </svg>
+            <svg style="--i:1;--j:3;">
+                <g id="inner1">
+                    <path fill="#00FFFF" d="M145.949 124.51L148.554 129.259C156.575 124.859 165.672 122.804 174.806 123.331C183.94 123.858 192.741 126.944 200.203 132.236C207.665 137.529 213.488 144.815 217.004 153.261C220.521 161.707 221.59 170.972 220.09 179.997L224.108 180.665L224.102 180.699L229.537 181.607C230.521 175.715 230.594 169.708 229.753 163.795L225.628 164.381C224.987 159.867 223.775 155.429 222.005 151.179C218.097 141.795 211.628 133.699 203.337 127.818C195.045 121.937 185.266 118.508 175.118 117.923C165.302 117.357 155.525 119.474 146.83 124.037C146.535 124.192 146.241 124.349 145.949 124.51ZM224.638 164.522C224.009 160.091 222.819 155.735 221.082 151.563C217.246 142.352 210.897 134.406 202.758 128.634C194.62 122.862 185.021 119.496 175.06 118.922C165.432 118.367 155.841 120.441 147.311 124.914L148.954 127.91C156.922 123.745 165.876 121.814 174.864 122.333C184.185 122.87 193.166 126.019 200.782 131.421C208.397 136.822 214.339 144.257 217.928 152.877C221.388 161.188 222.526 170.276 221.23 179.173L224.262 179.677C224.998 174.671 225.35 169.535 224.638 164.522Z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                    <path fill="#00FFFF" d="M139.91 220.713C134.922 217.428 130.469 213.395 126.705 208.758L130.983 205.286L130.985 205.288L134.148 202.721C141.342 211.584 151.417 217.642 162.619 219.839C173.821 222.036 185.438 220.232 195.446 214.742L198.051 219.491C197.759 219.651 197.465 219.809 197.17 219.963C186.252 225.693 173.696 227.531 161.577 225.154C154.613 223.789 148.041 221.08 142.202 217.234L139.91 220.713ZM142.752 216.399C148.483 220.174 154.934 222.833 161.769 224.173C173.658 226.504 185.977 224.704 196.689 219.087L195.046 216.09C185.035 221.323 173.531 222.998 162.427 220.82C151.323 218.643 141.303 212.747 134.01 204.122L131.182 206.5C134.451 210.376 138.515 213.607 142.752 216.399Z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                </g>
+            </svg>
+            <svg style="--i:2;--j:4;">
+                <path fill="#00FFFF" d="M180.956 186.056C183.849 184.212 186.103 181.521 187.41 178.349C188.717 175.177 189.013 171.679 188.258 168.332C187.503 164.986 185.734 161.954 183.192 159.65C180.649 157.346 177.458 155.883 174.054 155.46C170.649 155.038 167.197 155.676 164.169 157.288C161.14 158.9 158.683 161.407 157.133 164.468C155.582 167.528 155.014 170.992 155.505 174.388C155.997 177.783 157.524 180.944 159.879 183.439L161.129 182.259C159.018 180.021 157.648 177.186 157.207 174.141C156.766 171.096 157.276 167.989 158.667 165.245C160.057 162.5 162.261 160.252 164.977 158.806C167.693 157.36 170.788 156.788 173.842 157.167C176.895 157.546 179.757 158.858 182.037 160.924C184.317 162.99 185.904 165.709 186.581 168.711C187.258 171.712 186.992 174.849 185.82 177.694C184.648 180.539 182.627 182.952 180.032 184.606L180.956 186.056Z" id="center1"></path>
+                <path fill="#00FFFF" d="M172 166.445C175.068 166.445 177.556 168.932 177.556 172C177.556 175.068 175.068 177.556 172 177.556C168.932 177.556 166.444 175.068 166.444 172C166.444 168.932 168.932 166.445 172 166.445ZM172 177.021C174.773 177.021 177.021 174.773 177.021 172C177.021 169.227 174.773 166.979 172 166.979C169.227 166.979 166.979 169.227 166.979 172C166.979 174.773 169.227 177.021 172 177.021Z" id="center"></path>
+            </svg>
+        </div>
+    '''
+
+    pink = '''
+        <style type="text/css">body{background-color: rgb(255, 192, 203);}</style>
+    '''
+    blue = '''
+        <style type="text/css">body{background-color: rgb(118, 215, 234);}</style>
+    '''
+    def image_regular (name):
+        filename = str(name + '.png')
+        return '''
+            <style>
+                body {
+                    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1)), url("../static/images/background/''' + filename + '''");
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: 100% 100%;
+                }
+            </style>
+        '''
+    def image_roll (name):
+        filename = str(name + '.png')
+        return '''
+            <style>
+                body {
+                    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1)), url(../static/images/background/''' + filename + ''');
+                    background-size: cover;
+                }
+            </style>
+        '''
+    def discoloration (name):
+        d_image_1 = str(name + '_1.png')
+        d_image_2 = str(name + '_1.png')
+        return '''
+            <style>body{color: transparent;}</style>
+            <script>
+                function Fn() {
+                    var now = new Date();
+                    var hour = now.getHours();
+                    if (hour >= 7 && hour < 18) {
+                        document.body.style.backgroundImage = "url('../static/images/background/''' + d_image_1 + '''')";
+                        document.body.style.color = "black";
+                    } else {
+                        document.body.style.backgroundImage = "url('../static/images/background/''' + d_image_2 + '''')";
+                        document.body.style.color = "black";
+                    }
+                    setTimeout(changeBackground, 60000);
+                }
+            </script>
+        '''
+
+    def friend (name):
+        name = str(name)
+        friendname = re.sub(r'\d{2}', '', name)
+        return '<a href="' + name + '" target="_blank">' + friendname + '  </a>'
+    def cp (name):
+        name = str(name)
+        return '<a href="./' + name + '" target="_blank" id="link">&ensp;&emsp;&thinsp;&zwnj;&zwj;&ensp;&emsp;&thinsp;&zwnj;&zwj;</a>'
+
+    return {
+        '01黄兰婷': {
+            'name': '黄兰婷',
+            'id': '01',
+            'leave': '愿我们610所有人在未来生活中能开开心心，无忧无虑，有一个美好的未来，转眼白驹过隙又是一个毕业季，年少轻狂，未来不信宿命，愿我们保持自己的热爱，锦里附体，奔赴下一个烟火灿烂的山海！',
+            'birthday': '2010年08月03日',
+            'constellation': '狮子座',
+            'hobby': '跳舞、滑冰',
+            'motto': '不去讨好世界，也不去评论是非，做好自己就行',
+            'QQnumber': '3503933227',
+            'goodfriend': friend('32熊梓琪') + cp('12刘梓涵'),
+            'background': image_regular('黄兰婷'),
+            'typeface': 'KaiTi',
+            'music': 'wake.m4a',
+            'specialeffects': None,
+        },
+        '02江星汉': {
+            'name': '江星汉',
+            'id': '02',
+            'leave': None,
+            'birthday': '2010年02月20日',
+            'constellation': '双子座',
+            'hobby': '足球、象棋',
+            'motto': None,
+            'QQnumber': None,
+            'goodfriend': None,
+            'background': blue,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '03蒋俊峰': {
+            'name': '蒋俊峰',
+            'id': '03',
+            'leave': None,
+            'birthday': '2010年11月02日',
+            'constellation': '天蝎座',
+            'hobby': 'Ctrl',
+            'motto': '白金之星',
+            'QQnumber': '2745283841',
+            'goodfriend': friend('46董地'),
+            'background': discoloration('蒋俊峰'),
+            'typeface': None,
+            'music': '只因你太美.mp3',
+            'specialeffects': senior,
+        },
+        '04赖韵臣': {
+            'name': '赖韵臣',
+            'id': '04',
+            'leave': None,
+            'birthday': '2011年02月20日',
+            'constellation': '双鱼座',
+            'hobby': '羽毛球、编程',
+            'motto': '努力和成果一定是成正比的',
+            'QQnumber': '2938151174',
+            'goodfriend': friend('涂辰开') + friend('40张轩诚') + friend('26吴锦轩') + friend('24王尚敬') + friend('47段禹珩') + friend('46董地') + cp('50赵梓琪'),
+            'background': discoloration('赖韵臣'),
+            'typeface': 'pingfang',
+            'music': '我想牵着你的手.mp3',
+            'specialeffects': senior,
+        },
+        '05李佳颖': {
+            'name': '李佳颖',
+            'id': '05',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '3540495690',
+            'goodfriend': cp('35程天翼'),
+            'background': pink,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '06李景添': {
+            'name': '李景添',
+            'id': '06',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '1359996725',
+            'goodfriend': friend('44邓越兮'),
+            'background': blue,
+            'typeface': None,
+            'music': None,
+            'specialeffects': senior,
+        },
+        '07曾沁棠': {
+            'name': '曾沁棠',
+            'id': '07',
+            'leave': 'bye~',
+            'birthday': '2010年09月24日',
+            'constellation': '天秤座',
+            'hobby': '内卷、打游戏、拼LEGO',
+            'motto': '天生吾族，岂可轻弃',
+            'QQnumber': '2224265208',
+            'goodfriend': friend('35程天翼') + friend('30肖子墨'),
+            'background': image_roll('曾沁棠'),
+            'typeface': 'STSong',
+            'music': '子莫格尼.flac',
+            'specialeffects': None,
+        },
+        '08曾译琨': {
+            'name': '曾译琨',
+            'id': '08',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '3554474297',
+            'goodfriend': None,
+            'background': pink,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '09李芷萱': {
+            'name': '李芷萱',
+            'id': '09',
+            'leave': None,
+            'birthday': '2011年02月04日',
+            'constellation': '水瓶座',
+            'hobby': '跳舞、玩、看小说',
+            'motto': '加油，你不可以输给自己',
+            'QQnumber': '2543209882',
+            'goodfriend': friend('49付婉瑜') + friend('03蒋俊峰') + friend('05李佳颖') + cp('03蒋俊峰'),
+            'background': image_regular('李芷萱'),
+            'typeface': 'STXingkai',
+            'music': '《极乐净土》美依礼芽',
+            'specialeffects': None,
+        },
+        '10李卓翰': {
+            'name': '李卓翰',
+            'id': '10',
+            'leave': '祝610班的同学进入一个好初中，交到更多好朋友',
+            'birthday': '2010年10月11日',
+            'constellation': '天秤座',
+            'hobby': '拼高达',
+            'motto': ')人生无常大肠包小肠(',
+            'QQnumber': '1797281967',
+            'goodfriend': friend('46董地') + friend('40张轩诚') + friend('25吴锦轩') + friend('03蒋俊峰'),
+            'background': image_regular('李卓翰'),
+            'typeface': None,
+            'music': '樱花树下的定.mp3',
+            'specialeffects': None,
+        },
+        '11刘沛珊': {
+            'name': '刘沛珊',
+            'id': '11',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '2935883212',
+            'goodfriend': None,
+            'background': pink,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '12刘梓涵': {
+            'name': '刘梓涵',
+            'id': '12',
+            'leave': None,
+            'birthday': '2010年9月3号',
+            'constellation': '处女座',
+            'hobby': '打琨球',
+            'motto': None,
+            'QQnumber': '2577566470',
+            'goodfriend': cp('01黄兰婷'),
+            'background': blue,
+            'typeface': None,
+            'music': '只因你太美.mp3',
+            'specialeffects': None,
+        },
+        '13芦嘉悦': {
+            'name': '芦嘉悦',
+            'id': '13',
+            'leave': '青春不老，我们不散',
+            'birthday': '2010年11月13日',
+            'constellation': '天蝎座',
+            'hobby': '看帅哥、广纳后宫',
+            'motto': '>摆烂始我快乐<',
+            'QQnumber': '275171885',
+            'goodfriend': friend('08曾译琨') + friend('43邓欣宇') + friend('19陶静涵'),
+            'background': image_roll('芦嘉悦'),
+            'typeface': 'STXingkai',
+            'music': '追光者——岑宁儿',
+            'specialeffects': None,
+        },
+        '14陆佳贝': {
+            'name': '陆佳贝',
+            'id': '14',
+            'leave': None,
+            'birthday': '2011年05月20日 :)',
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '2468287148',
+            'goodfriend': None,
+            'background': blue,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '15马辰熠': {
+            'name': '马辰熠',
+            'id': '15',
+            'leave': '小学已经结束了，但我们的友谊永不结束!',
+            'birthday': '2011年01月20日',
+            'constellation': '水瓶座',
+            'hobby': '旅游',
+            'motto': '在意那么多，你还怎么快乐',
+            'QQnumber': '3584505168',
+            'goodfriend': friend('48方博涵') +cp('08曾译琨'),
+            'background': image_roll('马辰熠'),
+            'typeface': 'YouYuan',
+            'music': 'wake.m4a',
+            'specialeffects': None,
+        },
+        '16牛浩歌': {
+            'name': '牛浩歌',
+            'id': '16',
+            'leave': None,
+            'birthday': '2011年8月24日',
+            'constellation': '处女座',
+            'hobby': '玩游戏',
+            'motto': '（嗯...）',
+            'QQnumber': '743281307',
+            'goodfriend': friend('03蒋俊峰'),
+            'background': blue,
+            'typeface': None,
+            'music': '只因你太美.mp3',
+            'specialeffects': None,
+        },
+        '17任隆昕': {
+            'name': '任隆昕',
+            'id': '17',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '3256669779',
+            'goodfriend': None,
+            'background': blue,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '18唐元玮': {
+            'name': '唐元玮',
+            'id': '18',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': None,
+            'goodfriend': friend('35程天翼') + friend('30肖子墨') + friend('07曾沁棠'),
+            'background': blue,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '19陶静涵': {
+            'name': '陶静涵',
+            'id': '19',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '3037530380',
+            'goodfriend': cp('35程天翼'),
+            'background': pink,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '20田鑫怡': {
+            'name': '田鑫怡',
+            'id': '20',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': None,
+            'goodfriend': None,
+            'background': pink,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '21涂辰开': {
+            'name': '涂辰开',
+            'id': '21',
+            'leave': None,
+            'birthday': '2010年12月8日',
+            'constellation': '射手座',
+            'hobby': '玩，乒乓球',
+            'motto': '（嗯，让本帅哥想想...）',
+            'QQnumber': '249116662',
+            'goodfriend': friend('04赖韵臣') + friend('26吴锦轩') + friend('46董地') + friend('20田鑫怡') + friend('39张宸硕') + cp('50赵梓琪'),
+            'background': blue,
+            'typeface': None,
+            'music': '无悔.mp3',
+            'specialeffects': None,
+        },
+        '22涂辰心': {
+            'name': '涂辰心',
+            'id': '22',
+            'leave': '我们曾经在一起欣赏过美丽的花；我们曾经在一起幻想过美丽的季节。同学啊，同学，分别后不要忘了我们曾经一起走过的日子。我们有过如水的平静，有过激烈的辩论，也有过无声的竞争。我们紧靠肩头，紧握双手，拥有一个共同的理想，发出一个共同的心声。无论是得到的，还是失去的，一切都将存留在我记忆的最深处。',
+            'birthday': '2010年12月08日',
+            'constellation': '射手座',
+            'hobby': '看电视（谦虚）',
+            'motto': '学则智，不学则愚；学则治，不学则乱。自古圣贤，盛德大业，未有不由学而成者。',
+            'QQnumber': '249834769',
+            'goodfriend': friend('28吴心悦'),
+            'background': image_roll('涂辰心'),
+            'typeface': 'STCaiyun',
+            'music': None,
+            'specialeffects': senior,
+        },
+        '23汪子涵': {
+            'name': '汪子涵',
+            'id': '23',
+            'leave': '梦有多燃，就能飞得多远',
+            'birthday': '2011年07月06日',
+            'constellation': '巨蟹座',
+            'hobby': '看小说、打游戏、干饭、跳舞',
+            'motto': '总有人间一两风， 填我十万八千梦',
+            'QQnumber': '3373704132',
+            'goodfriend': friend('05李佳颖') + friend('41张雅涵') + friend('11刘沛珊') + friend('43邓欣宇'),
+            'background': image_roll ('汪子涵.png'),
+            'typeface': 'STXingkai',
+            'music': None,
+            'specialeffects': None,
+        },
+        '24王尚敬': {
+            'name': '王尚敬',
+            'id': '24',
+            'leave': None,
+            'birthday': '2011年3月18日',
+            'constellation': '双鱼座',
+            'hobby': '驾驶初号机',
+            'motto': '我一直深爱着T',
+            'QQnumber': '42934857',
+            'goodfriend': friend('22涂辰心') + friend('47段禹珩') + friend('04赖韵臣') + friend('48方博涵') + friend('21涂辰开') + cp('22涂辰心'),
+            'background': image_roll('王尚敬'),
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '25王梓萌': {
+            'name': '王梓萌',
+            'id': '25',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '2729167035',
+            'goodfriend': None,
+            'background': pink,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '26吴锦轩': {
+            'name': '吴锦轩',
+            'id': '26',
+            'leave': None,
+            'birthday': '2010年05月17日',
+            'constellation': '金牛座',
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '2263501973',
+            'goodfriend': None,
+            'background': blue,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '27吴心怡': {
+            'name': '吴心怡',
+            'id': '27',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': None,
+            'goodfriend': None,
+            'background': pink,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '28吴心悦': {
+            'name': '吴心悦',
+            'id': '28',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '1544421415',
+            'goodfriend': None,
+            'background': pink,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '29陈秭悦': {
+            'name': '陈秭悦',
+            'id': '29',
+            'leave': None,
+            'birthday': '2011年1月26日',
+            'constellation': '水瓶座',
+            'hobby': '书法',
+            'motto': '别爱我，没结果.',
+            'QQnumber': '1953726313',
+            'goodfriend': friend('21涂辰开') + friend('22涂辰心') + friend('04赖韵臣') + friend('50赵梓琪') +cp('21涂辰开'),
+            'background': pink,
+            'typeface': 'KaiTi',
+            'music': '有何不可.mp3',
+            'specialeffects': senior,
+        },
+        '30肖子墨': {
+            'name': '肖子墨',
+            'id': '30',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': None,
+            'goodfriend': friend('35程天翼') + friend('07曾沁棠') + friend('18唐元玮') + cp('38袁子衿'),
+            'background': blue,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '31陈梓虞': {
+            'name': '陈梓虞',
+            'id': '31',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': None,
+            'goodfriend': None,
+            'background': blue,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '32熊梓琪': {
+            'name': '熊梓琪',
+            'id': '32',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '3363199627',
+            'goodfriend': cp('39张宸硕'),
+            'background': pink,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '33程书文': {
+            'name': '程书文',
+            'id': '33',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': None,
+            'goodfriend': cp('38袁子衿'),
+            'background': blue,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '34姚沐珂': {
+            'name': '姚沐珂',
+            'id': '34',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '2407194606',
+            'goodfriend': cp('35程天翼'),
+            'background': pink,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '35程天翼': {
+            'name': '程天翼',
+            'id': '35',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': None,
+            'goodfriend': friend('07曾沁棠') + friend('30肖子墨') + friend('18唐元玮'),
+            'background': blue,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '36易雅兰': {
+            'name': '易雅兰',
+            'id': '36',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '728604086',
+            'goodfriend': None,
+            'background': pink,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '37程惜蕊': {
+            'name': '程惜蕊',
+            'id': '37',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': None,
+            'goodfriend': None,
+            'background': pink,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '38袁子衿': {
+            'name': '袁子衿',
+            'id': '38',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': None,
+            'goodfriend': cp('21涂辰开'),
+            'background': pink,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '39张宸硕': {
+            'name': '张宸硕',
+            'id': '39',
+            'leave': '加油吧！',
+            'birthday': '2010年11月11日',
+            'constellation': '天蝎座',
+            'hobby': '拼乐高',
+            'motto': '透支的快乐，需要无数的失望赔还',
+            'QQnumber': '3485360085',
+            'goodfriend': '<p>“够开朗，全班都是朋友”</p>',
+            'background': image_roll('张宸硕'),
+            'typeface': 'SimSun',
+            'music': '可不可以.m4a',
+            'specialeffects': None,
+        },
+        '40张轩诚': {
+            'name': '张轩诚',
+            'id': '40',
+            'leave': None,
+            'birthday': '2011年04月20日',
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '1142753959',
+            'goodfriend': None,
+            'background': blue,
+            'typeface': None,
+            'music': '不潮不用花钱.mp3',
+            'specialeffects': None,
+        },
+        '41张雅涵': {
+            'name': '张雅涵',
+            'id': '41',
+            'leave': '希望班里的每个人都能走向幸福的未来，长大以后，愿大家能再回到鲁小，共同回忆我们这六年来的时光',
+            'birthday': '2011年06月22日',
+            'constellation': '巨蟹座',
+            'hobby': '宅',
+            'motto': '色即是空',
+            'QQnumber': '5572801',
+            'goodfriend': friend('05李佳颖') + friend('11刘沛珊') + friend('23汪子涵') + cp('40张轩诚'),
+            'background': image_regular('张雅涵'),
+            'typeface': 'STFangsong',
+            'music': None,
+            'specialeffects': None,
+        },
+        '42张梓若': {
+            'name': '张梓若',
+            'id': '42',
+            'leave': '610永不散场',
+            'birthday': '2011年09月01号',
+            'constellation': '处女座',
+            'hobby': '旅游、弹钢琴',
+            'motto': '努力',
+            'QQnumber': '1904106096',
+            'goodfriend': friend('22涂辰心') + friend('27吴心怡') + friend('28吴心悦'),
+            'background': image_roll('张梓若'),
+            'typeface': 'STFangsong',
+            'music': '小城夏天.flac',
+            'specialeffects': None,
+        },
+        '43邓欣宇': {
+            'name': '邓欣宇',
+            'id': '43',
+            'leave': '希望610越来越好，莫愁前路无知己，天下谁人不识君',
+            'birthday': '2010年11月01日',
+            'constellation': '天蝎座',
+            'hobby': '看小说、打游戏',
+            'motto': '人活着就是为了高长恭',
+            'QQnumber': '1540696738',
+            'goodfriend': friend('11刘沛珊') + friend('41张雅涵') + friend('13芦嘉悦') + friend('23汪子涵') + friend('01黄兰婷'),
+            'background': image_roll('邓欣宇'),
+            'typeface': 'STHeiti',
+            'music': None,
+            'specialeffects': None,
+        },
+        '44邓越兮': {
+            'name': '邓越兮',
+            'id': '44',
+            'leave': None,
+            'birthday': None,
+            'constellation': None,
+            'hobby': None,
+            'motto': None,
+            'QQnumber': '3156922783',
+            'goodfriend': None,
+            'background': blue,
+            'typeface': None,
+            'music': None,
+            'specialeffects': None,
+        },
+        '45刁溪彧': {
+            'name': '刁溪彧',
+            'id': '45',
+            'leave': '愿归来人仍是少年',
+            'birthday': '2021年08月18日',
+            'constellation': '狮子座',
+            'hobby': '画画',
+            'motto': '世界孤立我，任他奚落……',
+            'QQnumber': '344473301',
+            'goodfriend': friend('08曾译琨') + cp('03蒋俊峰'),
+            'background': image_regular('刁溪彧'),
+            'typeface': 'Kaiti',
+            'music': '心墙，林俊杰',
+            'specialeffects': None,
+        },
+        '46董地': {
+            'name': '董地',
+            'id': '46',
+            'leave': None,
+            'birthday': '2011年8月9日',
+            'constellation': '狮子座',
+            'hobby': '<揍赖韵臣>',
+            'motto': '<我是泉搬笙父>',
+            'QQnumber': '3444302994',
+            'goodfriend': friend('21涂辰开') + friend('04赖韵臣') + friend('10李卓翰') + cp('11刘沛珊'),
+            'background': blue,
+            'typeface': None,
+            'music': '哭吧哭吧不是罪.m4a',
+            'specialeffects': None,
+        },
+        '47段禹珩': {
+            'name': '段禹珩',
+            'id': '47',
+            'leave': '110、210、310···六年时光如白驹过隙，转眼就要毕业了。长大以后，我们必将各奔东西。但愿那时，我们都还会记得对方，愿我们缘断情不断！',
+            'birthday': '2010年10月01日',
+            'constellation': '天秤座',
+            'hobby': '编程',
+            'motto': '（好问题）',
+            'QQnumber': '2398507109',
+            'goodfriend': friend('04赖韵臣') + friend('03蒋俊峰') + friend('39张宸硕') + friend('40张轩诚') + friend('21涂辰开') + friend('26吴锦轩') + friend('24王尚敬') + cp('22涂辰心'),
+            'background': image_roll('段禹珩'),
+            'typeface': 'STCaiyun',
+            'music': '爱意随风起.flac',
+            'specialeffects': senior,
+        },
+        '48方博涵': {
+            'name': '方博涵',
+            'id': '48',
+            'leave': None,
+            'birthday': '2011年7月11日',
+            'constellation': '巨蟹座',
+            'hobby': '吃喝玩乐',
+            'motto': '我是一只阳光开朗大男孩',
+            'QQnumber': None,
+            'goodfriend': friend('24王尚敬') + friend('12刘梓涵') + friend('39张宸硕') + friend('40张轩诚') + friend('15马辰熠'),
+            'background': image_regular('方博涵'),
+            'typeface': None,
+            'music': 'Lose_Control.mp3',
+            'specialeffects': None,
+        },
+        '49付婉瑜': {
+            'name': '付婉瑜',
+            'id': '49',
+            'leave': '人生中有许多感人的缘：有时会随风而去；有时会令你我无奈；有时会缠绵出更多的情。无论是谁随风而去，总有人独自感伤：都是缘吧。',
+            'birthday': '2011年06月25日',
+            'constellation': '巨蟹座',
+            'hobby': '画画、磕cp、犯贱',
+            'motto': '若非平台禁文墨，提笔倾尽虎狼词。',
+            'QQnumber': '1332169534',
+            'goodfriend': friend('03蒋俊峰') + friend('09李芷萱'),
+            'background': image_regular('付婉瑜'),
+            'typeface': 'STXingkai',
+            'music': '花火が瞬く夜に.flac',
+            'specialeffects': None,
+        },
+        '50赵梓琪': {
+            'name': '赵梓琪',
+            'id': '50',
+            'leave': None,
+            'birthday': '2010年11月03日',
+            'constellation': '天蝎座',
+            'hobby': '画画',
+            'motto': None,
+            'QQnumber': '1281755758',
+            'goodfriend': friend('22涂辰心') + friend('29陈秭悦') + cp('04赖韵臣'),
+            'background': '''<style>.body{background: linear-gradient(to bottom right, #00ffff 0%, #3366ff 100%);}</style>''',
+            'typeface': 'pingfang',
+            'music': None,
+            'specialeffects': senior,
+        },
+    }
+            </xmp></pre>
+            <hr/>
+            <h2 id="library">library.py</h2>
+            <pre class="root"><xmp>
+# !/usr/bin/python3
+# -*- coding : utf-8 -*-
+# coding: utf-8
+
+import flask, better_profanity, datetime, re, random, linecache, markupsafe, badwords, wcwidth, gevent, time
+
+# from gevent import *
+from flask import *
+from markupsafe import *
+# from profanity_check import *
+from badwords import *
+from better_profanity import *
+from time import *
+from datetime import *
+from re import *
+from linecache import *
+from random import *
+from wcwidth import *
+
+from flask import Flask, render_template
+# from gevent import pywsgi
+from time import strftime
+from random import choice
+from markupsafe import Markup
+from better_profanity import profanity
+# from profanity_check import predict, predict_prob
+# from datetime import datetime
+from wcwidth import wcswidth
+
+# import data, operation, main                
+            </xmp></pre>
+        </div>
+        <script>
+            // 获取所有包含代码块的<xmp>元素
+            const codeBlocks = document.querySelectorAll('xmp');
+        
+            codeBlocks.forEach((block) => {
+                // 获取代码块中的文本内容
+                const codeText = block.innerText;
+        
+                // 将代码文本按行拆分成数组
+                const lines = codeText.split('\n');
+        
+                // 计算行号的最大宽度
+                const lineNumberWidth = (lines.length + 1).toString().length;
+        
+                // 生成带有行号的新代码文本
+                const codeWithLineNumbers = lines
+                    .map((line, index) => {
+                        const lineNumber = (index + 1).toString().padStart(lineNumberWidth, ' ');
+                        return `${lineNumber}| ${line}`;
+                    })
+                    .join('\n');
+        
+                // 将带有行号的代码文本替换原来的内容
+                block.innerHTML = codeWithLineNumbers;
+            });
+        </script>        
+    </body>
+</html>

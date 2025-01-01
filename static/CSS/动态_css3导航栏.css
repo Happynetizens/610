@@ -1,0 +1,159 @@
+﻿/*
+    if your css system is error;
+    remember, believe me;
+    displace a new computer! it's not joke!
+    css version: v1.0.0.1:0.5th
+    0.5th birthday!
+*/
+
+.img-new {
+    position: absolute;
+    margin-bottom: 9px;
+    margin-left: 35px;
+}
+
+.div {
+    margin: 0 auto;
+    border: 0px;
+    width: 100px;
+    height: 20px;
+    border-radius: 15px;
+    background-image: linear-gradient(50deg, #F0F2F0 0%, #000C40 51%, #F0F2F0 100%);
+    transition-property: height, width;
+    transition-duration: 0.6s, 0.7s;
+    transition-delay: 0.7s, 0s;
+    opacity: 0.95;
+}
+
+.div:hover .img-new {
+    display: none;
+}
+
+.div .href {
+    position: absolute;
+    left: 60px;
+    top: 220px;
+    opacity: 0;
+}
+
+.div .href-a {
+    position: absolute;
+    left: 220px;
+    top: 220px;
+    opacity: 0;
+}
+
+.div .href-b {
+    position: absolute;
+    left: 380px;
+    top: 220px;
+    opacity: 0;
+}
+
+.div .href-c {
+    position: absolute;
+    left: 520px;
+    top: 220px;
+    opacity: 0;
+}
+
+.div .href-d {
+    position: absolute;
+    left: 680px;
+    top: 220px;
+    opacity: 0;
+}
+
+.div .href-e {
+    position: absolute;
+    left: 840px;
+    top: 220px;
+    opacity: 0;
+}
+
+.div .href-f {
+    position: absolute;
+    left: 1000px;
+    top: 220px;
+    opacity: 0;
+}
+
+.div:hover {
+    height: 70px;
+    width: 100%;
+
+    /* 漏洞修复 */
+    border:radius: 5px
+
+    transition: transform 1s cubic-bezier(.62,-0.14,.62,1.25);
+}
+
+.div:hover .href {
+    position: absolute;
+    left: 60px;
+    top: 220px;
+    opacity: 1;
+    color: yellow;
+    font-weight: 600;
+    transition-delay: 0.75s;
+}
+
+.div:hover .href-a {
+    position: absolute;
+    left: 220px;
+    top: 220px;
+    opacity: 1;
+    color: yellow;
+    font-weight: 600;
+    transition-delay: 0.75s;
+}
+
+.div:hover .href-b {
+    position: absolute;
+    left: 380px;
+    top: 220px;
+    opacity: 1;
+    color: yellow;
+    font-weight: 600;
+    transition-delay: 0.75s;
+}
+
+.div:hover .href-c {
+    position: absolute;
+    left: 520px;
+    top: 220px;
+    opacity: 1;
+    color: yellow;
+    font-weight: 600;
+    transition-delay: 0.75s;
+}
+
+.div:hover .href-d {
+    position: absolute;
+    left: 680px;
+    top: 220px;
+    opacity: 1;
+    color: yellow;
+    font-weight: 600;
+    transition-delay: 0.75s;
+}
+
+.div:hover .href-e {
+    position: absolute;
+    left: 840px;
+    top: 220px;
+    opacity: 1;
+    color: yellow;
+    font-weight: 600;
+    transition-delay: 0.75s;
+}
+
+.div:hover .href-f {
+    position: absolute;
+    left: 1020px;
+    top: 220px;
+    opacity: 1;
+    color: yellow;
+    font-weight: 600;
+    transition-delay: 0.75s;
+}

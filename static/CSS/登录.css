@@ -1,0 +1,17 @@
+/* 该层叠样式表技术人员：段禹珩 */
+.logon-name{
+    border:2px solid;
+    border-radius:25px;
+    height:35px;
+    width:100px;
+    box-shadow: 10px 10px 5px #80c0ff;
+}
+
+.logon-password{
+    border:2px solid;
+    border-radius:25px;
+    height:35px;
+    width:200px;
+    box-shadow: 10px 10px 5px #80c0ff;
+}
+/* 该层叠样式表技术人员：段禹珩 */

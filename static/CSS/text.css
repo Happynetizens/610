@@ -1,0 +1,12 @@
+/* 610 yyds */
+/* 帮助网页老nb啦！*/
+/* 只因住，这个css是老爆齐写的，切记！*/
+/* 当前版本？必须是v1.1！*/
+
+.help-text {
+    background: linear-gradient(to right, red, blue, yellow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 30px;
+}

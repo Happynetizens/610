@@ -1,0 +1,21 @@
+/* 886 886 886 886 886 */
+/* 今天昂，给你们秀。。秀波骚操作 */
+/* 嘿，你丫瞅啥呢，是我，你爹！ */
+
+.return {
+    width: 200px;
+    height: 30px;
+    background-color: blue;
+    background-image: linear-gradient(to right, blue, cyan);
+    border: 1px solid;
+    border-radius: 25px;
+}
+
+.return-href {
+    padding: 50px;
+    width: 100px;
+    height: 30px;
+    color: yellow;
+    font-size: 20px;
+    white-space: nowrap;
+}

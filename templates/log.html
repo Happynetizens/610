@@ -1,0 +1,45 @@
+<!--该网站技术人员：段禹珩-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>后端运行日志</title>
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="True hidden">
+            <ul>
+                <li><p><strong>201710重拾记忆：</strong>610主网站被访问了！</p></li>
+                <li><p><strong>XXX被光临了：</strong>有人访问了XXX的个人网站</p></li>
+                <li><p><strong>XXX被爱了：</strong>有人给XXX点了赞</p></li>
+                <li><p><strong>XXX被问候了：</strong>有人给XXX留了言</p></li>
+                <li><p><strong>XXX被陌生人问候了：</strong>有人给XXX留了言，但是输错了密码</p></li>
+                <li><p><strong>XXX差点被吐槽了：</strong>有人给XXX留言，但是里面包含敏感词（可能会有误判）</p></li>
+            </ul>
+        </div>
+        <div class="False">
+            <p>
+                {{log}}
+            </p>
+        </div>
+        <script>
+            var div1 = document.querySelector('.False');
+            var div2 = document.querySelector('.True');
+            function toggleDiv() {
+                if (div1.classList.contains('hidden')) {
+                    div1.classList.remove('hidden');
+                    div2.classList.add('hidden');
+                } else {
+                    div1.classList.add('hidden');
+                    div2.classList.remove('hidden');
+                }
+            }
+            document.addEventListener('click', toggleDiv);
+          </script>
+    </body>
+</html>
+<!--该网站技术人员：段禹珩-->

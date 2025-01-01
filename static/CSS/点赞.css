@@ -1,0 +1,58 @@
+/* 该层叠样式表技术人员：段禹珩 */
+/* 按钮样式 */
+.btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffedd3;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  position: relative;
+  transition: .5s ease;
+}
+
+/* 按钮前置元素 */
+.btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #00f0ff;
+  transition: .5s ease;
+}
+
+/* 鼠标悬停时按钮样式 */
+.btn:hover {
+  color: #1e1e2b;
+  transition-delay: .5s;
+}
+
+/* 鼠标悬停时按钮前置元素 */
+.btn:hover::before {
+  width: 100%;
+}
+
+/* 按钮后置元素 */
+.btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #ff5100;
+  border-radius: .5rem;
+  transition: .4s ease;
+  z-index: -1;
+}
+
+/* 鼠标悬停时按钮后置元素 */
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+/* 该层叠样式表技术人员：段禹珩 */

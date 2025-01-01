@@ -1,0 +1,16 @@
+run = "pip install -r requirements.txt; python.exe -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple --ignore-installed --trusted-host pypi.tuna.tsinghua.edu.cn; pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --ignore-installed datetime --trusted-host pypi.tuna.tsinghua.edu.cn; pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --ignore-installed gevent --trusted-host pypi.tuna.tsinghua.edu.cn; pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --ignore-installed flask --trusted-host pypi.tuna.tsinghua.edu.cn; pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --ignore-installed markupsafe --trusted-host pypi.tuna.tsinghua.edu.cn; pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --ignore-installed profanity-check --trusted-host pypi.tuna.tsinghua.edu.cn; pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --ignore-installed sklearn --trusted-host pypi.tuna.tsinghua.edu.cn; pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --ignore-installed badwords --trusted-host pypi.tuna.tsinghua.edu.cn; pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --ignore-installed greenlet --trusted-host pypi.tuna.tsinghua.edu.cn; pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --ignore-installed better_profanity --trusted-host pypi.tuna.tsinghua.edu.cn; pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --ignore-installed wcwidth --trusted-host pypi.tuna.tsinghua.edu.cn; pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --ignore-installed -r requirements.txt --trusted-host pypi.tuna.tsinghua.edu.cn; python main.py"
+language = "python"
+
+[packager]
+AUTO_PIP = true
+
+[env]
+VIRTUAL_ENV = "/root/${PROJECT_DIR}/venv"
+PATH = "${VIRTUAL_ENV}/bin:${PATH}"
+PYTHONPATH = "$PYTHONHOME/lib/python3.10:${VIRTUAL_ENV}/lib/python3.10/site-packages"
+REPLIT_POETRY_PYPI_REPOSITORY = "http://mirrors.csdn.net.cn/repository/csdn-pypi-mirrors/simple"
+MPLBACKEND = "TkAgg"
+POETRY_CACHE_DIR = "/root/${PROJECT_DIR}/.cache/pypoetry"
+
+[debugger]
+program = "main.py"

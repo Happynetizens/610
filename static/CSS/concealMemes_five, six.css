@@ -1,0 +1,134 @@
+/*
+    css version: v1.0.0.0.
+    python and keyframes = True.
+    opens txt.
+*/
+
+.conceal-five-new {
+    position: absolute;
+    left: 50px;
+    width: 900px;
+    height: 80px;
+    background-color: blue;
+    background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+    border: 0;
+    border-radius: 20px;
+    opacity: 0.99;
+    transition: box-shadow 0.3s;
+}
+
+.conceal-five-new:hover {
+    box-shadow: 0 4px 6px transparent, 0 0 20px rgba(0, 107, 234, 0.5);
+}
+
+.conceal-six-new {
+    position: absolute;
+    left: 25%;
+    width: 900px;
+    height: 80px;
+    background-color: blue;
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    border: 0;
+    border-radius: 20px;
+    opacity: 0.99;
+    transition: box-shadow 0.3s;
+}
+
+.conceal-six-new:hover {
+    box-shadow: 0 4px 6px transparent, 0 0 20px rgba(255, 105, 180, 0.4);
+}
+
+.conceal-text_five {
+    position: absolute;
+    left: 80px;
+    float: left;
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+}
+
+.conceal-text_six {
+    position: absolute;
+    left: 15%;
+    float: left;
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+}
+
+.conceal-people_five {
+    position: absolute;
+    left: 520px;
+    float: right;
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.conceal-people_six {
+    position: absolute;
+    left: 67%;
+    float: right;
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.others_one {width:570px; height:40px; background:linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%); border-radius:20px; opacity:0.99;}
+.others_two {width:570px; height:40px; background:linear-gradient(to right, #fc00ff 0%, #00dbde 51%, #fc00ff 100%); border-radius:20px; opacity:0.99;}
+.others_three {width:570px; height:40px;background:linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%); border-radius:20px; opacity:0.99;}
+.others_four {width:570px; height:40px; background-image:linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%); border-radius:20px; opacity:0.99;}
+.others_five {width:570px; height:40px; background-image:linear-gradient(to top, #c471f5 0%, #fa71cd 100%); border-radius:20px; opacity:0.99;}
+.others_six {width:570px; height:40px; background-image:linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%); border-radius:20px; opacity:0.99;}
+
+.others_text_one {position:absolute; margin-left:60px; margin-top:4px; font-size:20px; background:-webkit-linear-gradient(220.55deg, #FFF500 0%, #FFB800 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; white-space:nowrap; opacity:1;}
+.others_text_two {position:absolute; margin-left:180px; margin-top:4px; font-size:20px; background:-webkit-linear-gradient(220.55deg, #FFF500 0%, #FFB800 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; white-space:nowrap; opacity:1;}
+.others_text_three {position:absolute; margin-left:60px; margin-top:4px; font-size:20px; background:-webkit-linear-gradient(220.55deg, #FFF500 0%, #FFB800 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; white-space:nowrap; opacity:1;}
+.others_text_four {position:absolute; margin-left:125px; margin-top:4px; font-size:20px; background:linear-gradient(to top, #88d3ce 0%, #6e45e2 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; white-space:nowrap; opacity:1;}
+.others_text_five {position:absolute; margin-left:60px; margin-top:4px; font-size:20px; background:linear-gradient(to top, #c1dfc4 0%, #deecdd 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; white-space:nowrap; opacity:1;}
+.others_text_six {position:absolute; margin-left:125px; margin-top:4px; font-size:20px; background:linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; white-space:nowrap; opacity:1;}
+
+.Lingdong-Island {position:fixed; top:6px; left:50%; transform:translate(-50%); width:100px; height:15px; background-image:linear-gradient(to right, #00dbde 0%, #fc00ff 100%); border-radius:20px; opacity:0.99; transition-property:height,width; transition-duration:0.5s; transition-delay:0.5s,0s; z-index:2;}
+.Lingdong-Island:hover {height:30px; width:300px;}
+.Lingdong-renew {position:fixed; left:47%; transform:translate(-47%); font-size:20px; background:linear-gradient(60deg, #abecd6 0%, #fbed96 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; white-space:nowrap; opacity:0; transition:opacity 0.3s ease-in-out; transition-delay:0.5s; z-index:3;}
+.Lingdong-Island:hover .Lingdong-renew {opacity:1;}
+
+.renews {position:fixed; top:100px; left:50%; transform:translate(-50%); width:1000px; height:400px; background-image:linear-gradient(to right, #00dbde 0%, #fc00ff 100%); border-radius:25px; z-index:9997; display:none; overflow:scroll;         &::-webkit-scrollbar {
+            width: 0.5em;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #888;
+        }}
+#overlay {position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0, 0, 0, 0.5); z-index:9996; display:none;}
+#conceal-btn {position:fixed; top:108px; left:88.5%; font-size:50px; background:none; border:none; padding:0; font-family:inherit; font-size:inherit; color:yellow; text-decoration:none; cursor:pointer; z-index:9998; display:none;}
+#loading {position:fixed; top:100px; left:46.5%; top:45%; transform:translate(-46.5%, -45%); width:80px; height:80px; border-radius:50%; border:4px solid #ccc; background-image:linear-gradient(180deg, #2af598 0%, #009efd 100%); animation:loaderAnimation 1.2s linear infinite; z-index:9999; display:none; transition:transform 0.3s ease-in-out;}
+#renew-notice {position:absolute; padding:30px; font-size:30px; background:linear-gradient(to top, #96fbc4 0%, #f9f586 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; white-space:nowrap; z-index:9999; display:none;}
+#notice {position:absolute; padding:30px; font-size:25px; background:linear-gradient(to top, #96fbc4 0%, #f9f586 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; white-space:nowrap; z-index:9999; display:none;}
+@keyframes loaderAnimation {0% {transform:rotate(0deg);} 100% {transform:rotate(360deg);}}
+#loading:hover {transform:scale(1.1);}
+
+.h6 {margin: 0 auto; background-color:blue; background-image:linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%); font-size:30px; width:100%; height:100px;}
+.h6-a {font-size:40px; padding:20px; width:100%; height:100px; background:linear-gradient(to left, pink, blue); -webkit-background-clip:text; background-clip:text; color:transparent; text-align:center;}
+.comics {position:absolute; left:20px; width:973px; height:80px; background-image:linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%); border:0; border-radius:20px; opacity:0.95; transition:box-shadow 0.3s;}
+.comics-l {position:absolute; right:20px; width:973px; height:80px; background-image:linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%); border:0; border-radius:20px; opacity:0.95; transition:box-shadow 0.3s;}
+.comics-cc {position:absolute; left:20px; width:1023px; height:80px; background-image:linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%); border:0; border-radius:20px; opacity:0.95; transition:box-shadow 0.3s;}
+.comics:hover {box-shadow:0 10px 20px rgba(0, 0, 0, 0.3);}
+.comics-l:hover {box-shadow:0 10px 20px rgba(0, 0, 0, 0.3);}
+.comics-cc:hover {box-shadow:0 10px 20px rgba(0, 0, 0, 0.3);}
+.cps {position:absolute; left:600px; float:right; opacity:1;}
+.cps-l {position:absolute; left:600px; float:right; opacity:1;}
+.text-comic {position:absolute; left:80px; float:left; background:linear-gradient(to bottom left, pink, blue); -webkit-background-clip:text; -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+.text-comic-v {position:absolute; right:600px; float:right; background:linear-gradient(to bottom left, pink, blue); -webkit-background-clip:text; -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+.text-comic-v-long {position:absolute; right:400px; float:right; background:linear-gradient(to bottom left, pink, blue); -webkit-background-clip:text; -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+.text-comic-op {position:absolute; left:600px; float:left; opacity:1; background:linear-gradient(to bottom left, pink, blue); -webkit-background-clip:text; -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+.text-comic-op-v {position:absolute; right:77px; float:right; opacity:1; background:linear-gradient(to bottom left, pink, blue); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;}
+

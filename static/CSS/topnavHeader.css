@@ -1,0 +1,26 @@
+/* 66大顺~子！要不起！王炸！（得得得得。。 */
+
+                        /* 导航栏 */
+
+                        * {
+                            box-sizing: border-box;
+                        }
+
+                        body {
+                            margin: 0;
+                        }
+
+                        .header {
+                            background-color: cyan;
+                            background-image: linear-gradient(to right, #77FFEE, #0000FF);
+                            padding: 20px;
+                            text-align: center: #333;
+                        }
+
+
+                            .linear-gradient-text {
+                                background: linear-gradient(to left, #66DD00, #FFFF00, #77FFEE);
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                                color: transparent;
+                            }

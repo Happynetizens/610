@@ -1,0 +1,62 @@
+/* 该层叠样式表技术人员：段禹珩 */
+/* 设置输入框容器的位置、宽度和边距 */
+.input-container {
+  text-align: center;
+  position: relative;
+  margin: 50px 0;
+  width: 250px;
+}
+
+/* 设置输入框的字体大小、宽度、边框、下划线、内边距和背景颜色 */
+.input-container input[type="text"] {
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #80c0ff;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
+}
+
+/* 设置输入框标签的位置、颜色和过渡效果 */
+.input-container .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #80c0ff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* 设置输入框标签的位置、字体大小和颜色 */
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="text"]:valid ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* 设置输入框下划线的位置、高度、宽度、背景颜色和过渡效果 */
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* 设置输入框下划线的位置和过渡效果 */
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline {
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+}
+/* 该层叠样式表技术人员：段禹珩 */

@@ -1,0 +1,30 @@
+/* 该系列人员负责：爆齐 */
+/* 当前版本：v.1.2 */
+
+                    .box{
+                        width:500px;
+                        height:40px;
+                        border: 0px;
+                        margin:auto;
+                    }
+
+                        .input{
+                            float:left;
+                            width:408px;
+                            height:40px;
+                            background: cyan;
+                            background-image: linear-gradient(to right, white, cyan);
+                            outline:none
+                            border:none;
+                        }
+
+                            .button{
+                                float:right;
+                                width:92px;
+                                height:40px;
+                                color:white;
+                                background: blue;
+                                background-image: linear-gradient(to left, blue , cyan);
+                                border:none;
+                                outline:none;
+                            }

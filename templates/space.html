@@ -1,0 +1,71 @@
+<!--该网站技术人员：段禹珩-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{id}}{{name}}</title>
+        <link href="../static/images/ico/{{name}}.ico" rel="shortcut icon">
+        {{background}}
+        <audio autoplay="autoplay" loop="loop" preload="auto" src="../static/music/person/{{music}}"></audio>
+        <link rel="stylesheet" type="text/css" href="../static/CSS/留言框.css">
+		<link rel="stylesheet" type="text/css" href="../static/CSS/发送按钮.css">
+        <link rel="stylesheet" type="text/css" href="../static/CSS/转盘特效.css">
+        <link rel="stylesheet" type="text/css" href="../static/CSS/点赞.css">
+        <link rel="stylesheet" type="text/css" href="../static/CSS/评论框.css">
+        <link rel="stylesheet" type="text/css" href="../static/CSS/登录.css">
+        <link rel="stylesheet" type="text/css" href="../static/CSS/图片.css">
+        <link rel="stylesheet" type="text/css" href="../static/CSS/typeface.css">
+        <style>a{text-decoration: none;}</style>
+    </head>
+    <body onload="Fn()" class="body">
+        <font face="{{typeface}}" size="5">
+            <div>
+                <a href="../">←回主页</a>
+                <h1>{{id}}{{name}}</h1>
+                <img src="../static/images/photo/{{name}}.png" class="photo">
+                <br/>
+                {{leave}}
+                <h2>点赞功能</h2>
+                <p id="count">{{good}}个赞</p>
+                <form action="" name="good_p" method="post">
+                    <button id="likeBtn" class="btn" method="post" onclick="like()" type="submit" name="action" value="good_p">点赞</button>
+                </form>
+                <h2>个人资料</h2>
+                {{birthday}}{{constellation}}{{hobby}}{{motto}}{{goodfriend}}{{QQnumber}}
+            </div>
+            <div>
+                <h2>留言板</h2>
+                <form action="" name="comment" method="post" name="action" value="commend">
+                    <div class="input-container" method="post">
+                        <input type="text" name="comment" required="">
+                        <label class="label">留言框</label>
+                        <div class="underline">键入留言信息</div>
+                    </div>
+                    <div>
+                        <input placeholder="姓名" type="text" name="name" required="" class="logon-name">
+                        <input placeholder="密码" type="password" name="password" required="" class="logon-password">
+                    </div>
+                    <br/>
+                    <button id="btn" method="post" type="submit" name="action" value="sending">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <span>发送</span>
+                    </button>
+                    <div id="sending"></div>
+                </form>
+                <br/>
+                <div class="div">
+                    <scroll-container>{{comment}}</scroll-container>
+                </div>
+            </div>
+        </font>
+        {{specialeffects}}
+    </body>
+</html>
+<!--该网站技术人员：段禹珩-->

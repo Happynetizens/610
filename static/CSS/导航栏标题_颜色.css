@@ -1,0 +1,27 @@
+/* 该系列人员负责：爆齐 */
+/* 当前版本：v1.3 */
+
+                        /* 导航栏 */
+
+                        * {
+                            box-sizing: border-box;
+                        }
+
+                        body {
+                            margin: 0;
+                        }
+
+                        .header {
+                            background-color: cyan;
+                            background-image: linear-gradient(to bottom right, #77FFEE, #0000FF);
+                            padding: 20px;
+                            text-align: center: #333;
+                        }
+
+
+                            .linear-gradient-text {
+                                background: linear-gradient(to bottom left, #66DD00, #FFFF00, #77FFEE);
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                                color: transparent;
+                            }

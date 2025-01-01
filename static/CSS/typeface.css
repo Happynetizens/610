@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'STCaiyun';
+    src: url('../font/STCaiyun.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'STHupo';
+    src: url('../font/STHupo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'YouYuan';
+    src: url('../font/YouYuan.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'pingfang';
+    src: url('../font/pingfang.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'KaiTi';
+    src: url('../font/KaiTi.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FangSong';
+    src: url('../font/FangSong.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'STSong';
+    src: url('../font/STSong.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'STXingkai.ttf';
+    src: url('../font/STXingkai.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'STFangsong';
+    src: url('../font/STFangsong.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SimSun';
+    src: url('../font/SimSun.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'STHeiti';
+    src: url('../font/STHeiti.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'STXinwei';
+    src: url('../font/STXinwei.ttf') format('truetype');
+}

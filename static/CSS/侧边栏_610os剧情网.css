@@ -1,0 +1,609 @@
+/*
+
+【访问权限不足，请使用Key-Time-over后再重试！】
+【齐】可恶，还是无法破解时间链空！
+【零】若是..在以往的记录里？可能会有线索？
+【In】以往的记录？
+【链空失效，错误码：time 404_for in found】
+
+610os编写：爆齐
+css声明：该css是网站关于610os及背景音乐的侧边栏，非相关人员请勿更改！
+css负责：爆齐
+css编写：爆齐
+css后期混合：语数双零 & 赖总
+css教程来源：菜鸟教程（居中，渐变色，透明度，过渡动画等）；CSDN博客（渐变背景，绝对定位等）
+css后端支持：语数双零
+css所属：610梗网站，610os剧情网
+css总网站所属：610毕业网站
+css其他支持：暂无
+css部分图片来源：百度图片
+css当前版本：__v3.0.2__0.5th
+css最后更新时间：2023-9-23
+css特别内容：暂无
+css_610os引用：610os_系统重启（610osIN_Python）
+
+*/
+
+.sidebar_os {
+    position: fixed;
+    left: 30px;
+    top: 450px;
+    width: 5rem;
+    height: 5rem;
+    background-color: blue;
+    background-image: linear-gradient(to bottom right, cyan, blue, purple);
+    opacity: 0.7;
+    border-radius: 50%;
+    transition-property: width, height;
+    transition-duration: 0.3s, 0.25s;
+}
+
+.sidebar_os:hover {
+    width: 800px;
+    height: 5rem;
+    border-radius: 20px;
+}
+
+.sidebar_os-text {
+    position: fixed;
+    left: 45px;
+    top: 455px;
+    width: 5rem;
+    height: 5rem;
+    color: yellow;
+    font-size: 26px;
+    opacity: 1;
+}
+
+.sidebar_os-chapter {
+    display: none;
+    position: fixed;
+    left: 155px;
+    top: 465px;
+    width: 5rem;
+    height: 5rem;
+    color: yellow;
+    font-size: 30px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-baoqi {
+    display: none;
+    position: fixed;
+    left: 250px;
+    top: 465px;
+    width: 5rem;
+    height: 5rem;
+    color: yellow;
+    font-size: 30px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-musicCe {
+    display: none;
+    position: fixed;
+    left: 320px;
+    top: 465px;
+    width: 5rem;
+    height: 5rem;
+    color: yellow;
+    font-size: 30px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-music {
+    position: fixed;
+    left: 45px;
+    top: 355px;
+    width: 5rem;
+    height: 5rem;
+    color: yellow;
+    font-size: 25px;
+}
+
+.sidebar_os-music_conceal {
+    position: fixed;
+    left: 45px;
+    top: 245px;
+    width: 5rem;
+    height: 5rem;
+    color: yellow;
+    font-size: 25px;
+}
+
+.sidebar_os-bgm1 {
+    display: none;
+    position: fixed;
+    left: 140px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-bgm2 {
+    display: none;
+    position: fixed;
+    left: 240px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-bgm3 {
+    display: none;
+    position: fixed;
+    left: 375px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-bgm4 {
+    display: none;
+    position: fixed;
+    left: 490px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-bgm5 {
+    display: none;
+    position: fixed;
+    left: 600px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-bgm6 {
+    display: none;
+    position: fixed;
+    left: 720px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-bgmover {
+    display: none;
+    position: fixed;
+    left: 820px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-other {
+    display: none;
+    position: fixed;
+    left: 1070px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-musicbar {
+    position: fixed;
+    left: 30px;
+    top: 350px;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: blue;
+    background-image: linear-gradient(to bottom right, cyan, blue, purple);
+    opacity: 0.8;
+    transition-property: width, height;
+    transition-duration: 0.35s, 0.25s;
+}
+
+.sidebar_os-musicbar_conceal {
+    position: fixed;
+    left: 30px;
+    top: 240px;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: blue;
+    background-image: linear-gradient(to bottom right, cyan, blue, purple);
+    opacity: 0.8;
+    transition-property: width, height;
+    transition-duration: 0.35s, 0.25s;
+}
+
+.sidebar_os-conceal-bgm1 {
+    display: none;
+    position: fixed;
+    left: 140px;
+    top: 250px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-conceal-bgm2 {
+    display: none;
+    position: fixed;
+    left: 240px;
+    top: 250px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-conceal-bgm3 {
+    display: none;
+    position: fixed;
+    left: 375px;
+    top: 250px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-conceal-bgm4 {
+    display: none;
+    position: fixed;
+    left: 510px;
+    top: 250px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-conceal-bgm5 {
+    display: none;
+    position: fixed;
+    left: 620px;
+    top: 250px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-conceal-bgm6 {
+    display: none;
+    position: fixed;
+    left: 750px;
+    top: 250px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-conceal-bgm7 {
+    display: none;
+    position: fixed;
+    left: 870px;
+    top: 250px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-conceal-bgm8 {
+    display: none;
+    position: fixed;
+    left: 1000px;
+    top: 250px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.sidebar_os-musicbar:hover {
+    width: 1160px;
+    height: 5rem;
+    border-radius: 20px;
+}
+
+.sidebar_os-musicbar_conceal:hover {
+    width: 1160px;
+    height: 5rem;
+    border-radius: 20px;
+}
+
+.sidebar_os-musicbar_conceal:hover .sidebar_os-conceal-bgm1 {
+    display: block;
+    position: fixed;
+    left: 120px;
+    top: 260px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar_os-musicbar_conceal:hover .sidebar_os-conceal-bgm2 {
+    display: block;
+    position: fixed;
+    left: 235px;
+    top: 260px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar_os-musicbar_conceal:hover .sidebar_os-conceal-bgm3 {
+    display: block;
+    position: fixed;
+    left: 365px;
+    top: 260px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar_os-musicbar_conceal:hover .sidebar_os-conceal-bgm4 {
+    display: block;
+    position: fixed;
+    left: 520px;
+    top: 260px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar_os-musicbar_conceal:hover .sidebar_os-conceal-bgm5 {
+    display: block;
+    position: fixed;
+    left: 650px;
+    top: 260px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar_os-musicbar_conceal:hover .sidebar_os-conceal-bgm6 {
+    display: block;
+    position: fixed;
+    left: 790px;
+    top: 260px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar_os-musicbar_conceal:hover .sidebar_os-conceal-bgm7 {
+    display: block;
+    position: fixed;
+    left: 905px;
+    top: 260px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar_os-musicbar_conceal:hover .sidebar_os-conceal-bgm8 {
+    display: block;
+    position: fixed;
+    left: 1055px;
+    top: 260px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar_os:hover .sidebar_os-chapter {
+    display: block;
+    position: fixed;
+    left: 155px;
+    top: 465px;
+    width: 5rem;
+    height: 5rem;
+    color: yellow;
+    font-size: 30px;
+    opacity: 1;
+    transition-delay: 0.23s;
+}
+
+.sidebar_os:hover .sidebar_os-baoqi {
+    display: block;
+    position: fixed;
+    left: 310px;
+    top: 465px;
+    width: 5rem;
+    height: 5rem;
+    color: yellow;
+    font-size: 30px;
+    opacity: 1;
+    transition-delay: 0.23s;
+}
+
+.sidebar_os:hover .sidebar_os-musicCe {
+    display: block;
+    position: fixed;
+    left: 590px;
+    top: 465px;
+    width: 5rem;
+    height: 5rem;
+    color: yellow;
+    font-size: 30px;
+    white-space: nowrap;
+    opacity: 1;
+    transition-delay: 0.23s;
+}
+
+.sidebar_os-musicbar:hover .sidebar_os-bgm1 {
+    display: block;
+    position: fixed;
+    left: 140px;
+    top: 370px;
+    width: 5rem;
+    height: 5rem;
+    color: yellow;
+    font-size: 25px;
+    opacity: 1;
+}
+
+.sidebar_os-musicbar:hover .sidebar_os-bgm2 {
+    display: block;
+    position: fixed;
+    left: 230px;
+    top: 370px;
+    width: 5rem;
+    height: 5rem;
+    color: yellow;
+    font-size: 25px;
+    opacity: 1;
+}
+
+.sidebar_os-musicbar:hover .sidebar_os-bgm3 {
+    display: block;
+    position: fixed;
+    left: 365px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar_os-musicbar:hover .sidebar_os-bgm4 {
+    display: block;
+    position: fixed;
+    left: 480px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar_os-musicbar:hover .sidebar_os-bgm5 {
+    display: block;
+    position: fixed;
+    left: 590px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar_os-musicbar:hover .sidebar_os-bgm6 {
+    display: block;
+    position: fixed;
+    left: 715px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar_os-musicbar:hover .sidebar_os-bgmover {
+    display: block;
+    position: fixed;
+    left: 835px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar_os-musicbar:hover .sidebar_os-other {
+    display: block;
+    position: fixed;
+    left: 1070px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+    color: yellow;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 1;
+}
